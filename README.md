@@ -60,3 +60,4 @@ Edite `src/config/seminario.ts` com os valores finais:
 5. Na página de obrigado, o nome é restaurado do `sessionStorage` e o CTA principal leva ao grupo de WhatsApp.
 
 > Observação: os tiers VIP e Platinum atualmente apontam para placeholders (`#vip-checkout` / `#platinum-checkout`). Quando os links reais de pagamento forem definidos, basta substituí-los em `src/config/seminario.ts`. Se for desejado integrar o checkout em modal (como no `doutora-escola-v2`), podemos portar o componente `DE2CheckoutModal.astro`.
+// Ultima atualizacao: 2026-05-11 19:56:20
