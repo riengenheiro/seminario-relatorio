@@ -1,0 +1,46 @@
+---
+import { SEMINARIO } from '../config/seminario';
+---
+<section class="bg-gradient-to-b from-[#2C3E99] to-[#1a2570] text-white pt-12 pb-16 md:pt-20 md:pb-24 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+    <span class="inline-block mb-6 px-4 py-1.5 rounded-full bg-white/15 border border-white/25 text-xs md:text-sm font-bold uppercase tracking-wider">
+      Seminário online e gratuito
+    </span>
+
+    <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+      Participe do <span class="text-[#FFD54F]">Seminário de Relatórios</span><br class="hidden md:block" />
+      e descubra <span class="underline decoration-[#4CAF50] decoration-4 underline-offset-4">o que escrever</span>
+      e <span class="underline decoration-[#4CAF50] decoration-4 underline-offset-4">como escrever</span> de forma técnica
+      nesse momento que vivemos.
+    </h1>
+
+    <p class="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+      Uma aula prática para professoras que querem deixar os relatórios mais técnicos,
+      claros e dentro da BNCC — sem perder horas relendo cada parágrafo.
+    </p>
+
+    <div class="inline-flex flex-col md:flex-row gap-4 md:gap-6 items-center justify-center mb-8">
+      <div class="rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/25 px-6 py-4 min-w-[240px]">
+        <p class="text-xs uppercase tracking-wider text-white/70 mb-1">Data</p>
+        <p class="text-2xl font-extrabold">{SEMINARIO.dataExibida}</p>
+      </div>
+      <div class="rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/25 px-6 py-4 min-w-[240px]">
+        <p class="text-xs uppercase tracking-wider text-white/70 mb-1">Horário</p>
+        <p class="text-2xl font-extrabold">{SEMINARIO.horaExibida}</p>
+      </div>
+    </div>
+
+    <div class="inline-flex items-center gap-2 bg-[#4CAF50]/20 border-2 border-[#4CAF50] rounded-full px-5 py-2 text-sm md:text-base font-bold">
+      <span class="text-[#FFD54F]">+</span>
+      Certificado de participação de {SEMINARIO.cargaGratuita} — GRATUITO
+    </div>
+
+    <p class="mt-10 text-white/80 text-sm md:text-base">
+      Role a página, escolha seu nível de participação e garanta sua vaga abaixo.
+    </p>
+
+    <a href="#tiers" class="mt-4 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#4CAF50] to-[#2E7D32] hover:from-[#43A047] hover:to-[#1B5E20] text-white font-black text-base md:text-lg px-8 py-4 rounded-2xl shadow-[0_8px_30px_rgba(76,175,80,0.5)] hover:scale-105 active:scale-100 transition-all duration-300 min-h-[56px] border-2 border-white/30">
+      VER OS PLANOS DE PARTICIPAÇÃO ↓
+    </a>
+  </div>
+</section>

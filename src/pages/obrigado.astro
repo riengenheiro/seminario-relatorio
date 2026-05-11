@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SRFooter from '../components/SRFooter.astro';
+import { WHATSAPP_GRUPO, SEMINARIO } from '../config/seminario';
+
+const title = 'Vaga confirmada — ' + SEMINARIO.nome;
+const description = 'Sua vaga no ' + SEMINARIO.nome + ' está confirmada. Entre agora no grupo oficial do WhatsApp para receber o link da aula.';
+---
+<Layout title={title} description={description} canonicalPath="/obrigado/">
+  <main class="min-h-screen w-full bg-white text-black font-sans antialiased flex flex-col">
+
+    <section class="flex-1 px-6 py-14 md:py-20 bg-gradient-to-b from-[#2C3E99] to-[#1a2570] text-white">
+      <div class="max-w-2xl mx-auto text-center">
+        <span class="inline-block mb-6 px-4 py-1.5 rounded-full bg-[#4CAF50] text-white text-xs md:text-sm font-bold uppercase tracking-wider shadow-lg">
+          ✓ Inscrição confirmada
+        </span>
+
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-5 leading-tight">
+          Parabéns<span id="nome-aluna"></span>!<br />
+          Sua vaga no <span class="text-[#FFD54F]">Seminário de Relatórios</span> está confirmada.
+        </h1>
+
+        <p class="text-lg text-white/90 mb-10">
+          Para receber o <strong>link da aula</strong> e todos os avisos importantes,
+          entre agora no grupo oficial de WhatsApp:
+        </p>
+
+        <a
+          href={WHATSAPP_GRUPO}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1ebe5b] text-white font-black text-lg md:text-xl px-8 py-5 rounded-2xl shadow-[0_8px_30px_rgba(37,211,102,0.5)] hover:shadow-[0_12px_40px_rgba(37,211,102,0.6)] hover:scale-105 active:scale-100 transition-all duration-300 min-h-[64px] border-2 border-white/30"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-7 h-7" fill="currentColor" aria-hidden="true">
+            <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.49-1.318.116-.27.244-.557.244-.86 0-.288-2.064-1.247-2.378-1.247zm-2.27 8.55c-1.79 0-3.55-.487-5.063-1.39l-3.522 1.142 1.145-3.522a9.93 9.93 0 0 1-1.605-5.422c0-5.493 4.55-9.95 10.045-9.95 5.49 0 9.946 4.457 9.946 9.95 0 5.493-4.457 9.95-9.946 9.95zm0-21.948c-6.617 0-12 5.383-12 12 0 2.118.56 4.205 1.604 6.04L4 32l5.252-1.703c1.747.92 3.708 1.405 5.693 1.405 6.617 0 12-5.383 12-12 0-3.21-1.245-6.227-3.522-8.502-2.276-2.276-5.295-3.523-8.5-3.523z"/>
+          </svg>
+          ENTRAR NO GRUPO DO WHATSAPP
+        </a>
+
+        <p class="mt-8 text-white/80 text-sm md:text-base leading-relaxed max-w-lg mx-auto">
+          <strong class="text-white">P.S.:</strong> é pelo grupo que vou mandar o link da transmissão,
+          os materiais e os avisos mais importantes.
+          Não deixe de entrar. 👆
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-white py-12 px-6 border-t border-gray-100">
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="text-gray-700 mb-3 font-semibold">Próximos passos:</p>
+        <ul class="text-gray-600 text-sm md:text-base space-y-2 mb-2 inline-block text-left">
+          <li><span class="text-[#4CAF50] font-bold">1.</span> Entre no grupo do WhatsApp pelo botão acima</li>
+          <li><span class="text-[#4CAF50] font-bold">2.</span> Confira sua caixa de e-mail (e o spam) — vou te mandar uma mensagem de confirmação</li>
+          <li><span class="text-[#4CAF50] font-bold">3.</span> Salve a data: <strong>{SEMINARIO.dataExibida} · {SEMINARIO.horaExibida}</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <SRFooter />
+  </main>
+</Layout>
+
+<script is:inline>
+  (function () {
+    try {
+      var nome = sessionStorage.getItem('sr_nome');
+      if (!nome) {
+        var params = new URLSearchParams(window.location.search);
+        nome = params.get('nome');
+      }
+      if (nome) {
+        var primeiro = String(nome).trim().split(/\s+/)[0];
+        if (primeiro) {
+          var el = document.getElementById('nome-aluna');
+          if (el) el.textContent = ', ' + primeiro;
+        }
+      }
+      if (window.fbq) {
+        try { window.fbq('track', 'CompleteRegistration'); } catch (e) {}
+      }
+    } catch (e) {}
+  })();
+</script>
