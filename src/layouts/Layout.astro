@@ -46,6 +46,20 @@ const {
   </head>
   <body>
     <slot />
+
+    {/* Aviso de Cookies - discreto no rodapé */}
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900/95 text-white text-xs md:text-sm py-3 px-4 md:px-6 z-50 backdrop-blur-sm border-t border-gray-700" style="display: none;">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+        <p class="text-center md:text-left text-white/80">
+          Este site utiliza cookies para melhorar sua experiência e rastreamento de conversões.
+          <a href="https://doutoraescola.com.br/privacidade/privacidade.html" target="_blank" rel="noopener noreferrer" class="underline hover:text-white ml-1">Saiba mais</a>
+        </p>
+        <button id="cookie-accept" class="shrink-0 bg-white/10 hover:bg-white/20 text-white px-4 py-1.5 rounded-lg transition-colors text-xs font-medium border border-white/20">
+          Entendi
+        </button>
+      </div>
+    </div>
+
     <script is:inline data-cfasync="false">
       (function () {
         var ALLOWED = ['aff', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'src', 'ref'];
@@ -91,6 +105,24 @@ const {
           },
           true
         );
+
+        /* Cookie banner discreto */
+        (function () {
+          var banner = document.getElementById('cookie-banner');
+          var acceptBtn = document.getElementById('cookie-accept');
+          if (!banner || !acceptBtn) return;
+          try {
+            if (!localStorage.getItem('cookies_accepted')) {
+              banner.style.display = 'block';
+            }
+          } catch (e) {}
+          acceptBtn.addEventListener('click', function () {
+            try {
+              localStorage.setItem('cookies_accepted', '1');
+            } catch (e) {}
+            banner.style.display = 'none';
+          });
+        })();
       })();
     </script>
   </body>
