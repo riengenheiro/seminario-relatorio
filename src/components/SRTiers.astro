@@ -30,11 +30,11 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
         <ul class="space-y-3 text-gray-700 mb-6 flex-1">
           <li class="flex items-start gap-2">
             <span class="text-[#4CAF50] font-bold mt-0.5">✓</span>
-            <span>Seminário ao vivo</span>
+            <span><strong>Acesso completo</strong> ao Seminário ao vivo</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="text-[#4CAF50] font-bold mt-0.5">✓</span>
-            <span>Certificado de participação — {SEMINARIO.cargaGratuita}</span>
+            <span><strong>Certificado de participação digital</strong> — {SEMINARIO.cargaGratuita} de formação</span>
           </li>
         </ul>
         <a href={CHECKOUT_GRATUITO} data-tier="gratuito" class="js-tier-cta block w-full text-center text-[#2C3E99] font-extrabold text-base py-4 rounded-xl border-2 border-[#2C3E99] hover:bg-[#2C3E99] hover:text-white transition-colors">
@@ -52,23 +52,23 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
         <ul class="space-y-3 text-gray-700 mb-6 flex-1">
           <li class="flex items-start gap-2">
             <span class="text-[#4CAF50] font-bold mt-0.5">✓</span>
-            <span><strong>Tudo do plano Gratuito</strong></span>
+            <span><strong>Todo o conteúdo do Plano Gratuito</strong></span>
           </li>
           <li class="flex items-start gap-2">
             <span class="text-[#4CAF50] font-bold mt-0.5">✓</span>
-            <span>Certificado Gov — {SEMINARIO.cargaVip}</span>
+            <span><strong>Certificado Assinado no GOV.BR</strong> no formato PDF — {SEMINARIO.cargaVip} de capacitação profissional</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="text-[#4CAF50] font-bold mt-0.5">✓</span>
-            <span>Sala VIP no Zoom com a Gua (30 min antes)</span>
+            <span><strong>Encontro exclusivo com a Gua</strong> — 30 minutos antes da aula para conversar e tirar dúvidas</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="text-[#4CAF50] font-bold mt-0.5">✓</span>
-            <span>Aula gravada (replay)</span>
+            <span><strong>Acesso vitalício</strong> à gravação da aula (replay)</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="text-[#4CAF50] font-bold mt-0.5">✓</span>
-            <span>Material da aula em PDF</span>
+            <span><strong>Material completo da aula</strong> em PDF para consultar quando precisar</span>
           </li>
         </ul>
         <a href={CHECKOUT_VIP} data-tier="vip" class="js-tier-cta block w-full text-center text-white font-black text-base py-4 rounded-xl transition-all duration-150 active:scale-[0.98]" style="background:#2C3E99; box-shadow: 0 5px 0 #1a2570;">
@@ -89,27 +89,27 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
         <ul class="space-y-3 text-gray-700 mb-6 flex-1">
           <li class="flex items-start gap-2">
             <span class="text-[#7C3AED] font-bold mt-0.5">✓</span>
-            <span><strong>Tudo do plano VIP</strong></span>
+            <span><strong>Todos os benefícios do Plano VIP</strong></span>
           </li>
           <li class="flex items-start gap-2">
             <span class="text-[#7C3AED] font-bold mt-0.5">✓</span>
-            <span>Certificado Gov — {SEMINARIO.cargaPlatinum}</span>
+            <span><strong>Certificado Assinado no GOV.BR</strong> no formato PDF — {SEMINARIO.cargaPlatinum} de capacitação profissional</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="text-[#7C3AED] font-bold mt-0.5">✓</span>
-            <span>Certificado físico pelos Correios</span>
+            <span><strong>Certificado físico impresso</strong> entregue em sua casa pelos Correios</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="text-[#7C3AED] font-bold mt-0.5">✓</span>
-            <span>15 Modelos de Relatórios</span>
+            <span><strong>15 Modelos Prontos de Relatórios</strong> para usar na sua prática docente</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="text-[#7C3AED] font-bold mt-0.5">✓</span>
-            <span>Grupo de suporte prioritário</span>
+            <span><strong>Grupo de suporte prioritário</strong> para tirar dúvidas e networking com outras professoras</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="text-[#7C3AED] font-bold mt-0.5">✓</span>
-            <span>Aula extra gravada + Ebook</span>
+            <span><strong>Bônus exclusivo:</strong> Aula extra gravada + Ebook especial</span>
           </li>
         </ul>
         <a href={CHECKOUT_PLATINUM} data-tier="platinum" class="js-tier-cta block w-full text-center text-white font-black text-base py-4 rounded-xl transition-all duration-150 active:scale-[0.98]" style="background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%); box-shadow: 0 5px 0 #4C1D95;">
