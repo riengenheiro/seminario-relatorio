@@ -1,106 +1,111 @@
 ---
 import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '../config/seminario';
 ---
-<section id="tiers" class="py-3 px-3 md:py-16 md:px-6 bg-gradient-to-b from-[#1a2570] via-white to-white">
-  <div class="max-w-6xl mx-auto">
-    <!-- Título mobile minimal -->
-    <div class="text-center mb-3 md:mb-8">
-      <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-wider mb-1">Escolha sua participação</p>
-      <h2 class="text-lg md:text-3xl font-extrabold text-gray-900">Garanta sua vaga</h2>
+<section id="tiers" class="bg-gray-50 py-12 md:py-20 px-5">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="text-center mb-8 md:mb-12">
+      <p class="text-[11px] md:text-xs font-medium text-gray-500 uppercase tracking-[0.2em] mb-2">
+        Escolha sua participação
+      </p>
+      <h2 class="text-xl md:text-3xl font-bold text-gray-900">Garanta sua vaga</h2>
     </div>
 
-    <!-- Cards horizontal em mobile, grid em desktop -->
-    <div class="flex md:grid md:grid-cols-3 gap-2 md:gap-6 overflow-x-auto md:overflow-visible pb-2 md:pb-0 snap-x snap-mandatory">
+    <div class="space-y-3 md:space-y-0 md:grid md:grid-cols-3 md:gap-5">
 
-      {/* GRATUITO - Card compacto */}
-      <div class="snap-center shrink-0 w-[85vw] md:w-auto bg-white rounded-2xl border-2 border-gray-200 p-3 md:p-5 shadow-sm flex flex-col">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-[10px] font-bold text-gray-500 uppercase">Gratuito</span>
-          <span class="text-xl md:text-3xl font-black text-gray-900">R$ 0</span>
+      {/* GRATUITO */}
+      <div class="bg-white rounded-lg border border-gray-200 p-5 md:p-6 flex flex-col">
+        <div class="mb-4 pb-4 border-b border-gray-100">
+          <p class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">Gratuito</p>
+          <p class="text-3xl font-bold text-gray-900">R$ 0</p>
         </div>
-        <ul class="space-y-1 text-gray-700 mb-3 flex-1 text-xs md:text-sm">
-          <li class="flex items-start gap-1.5">
-            <span class="text-[#4CAF50] font-bold">✓</span>
-            <span>Seminário ao vivo</span>
+        <ul class="space-y-2.5 text-sm text-gray-700 mb-5 flex-1">
+          <li class="flex items-start gap-2.5">
+            <span class="text-gray-400 mt-0.5">—</span>
+            <span>Acesso completo ao Seminário ao vivo</span>
           </li>
-          <li class="flex items-start gap-1.5">
-            <span class="text-[#4CAF50] font-bold">✓</span>
-            <span>Certificado digital {SEMINARIO.cargaGratuita}</span>
+          <li class="flex items-start gap-2.5">
+            <span class="text-gray-400 mt-0.5">—</span>
+            <span>Certificado de participação digital ({SEMINARIO.cargaGratuita})</span>
           </li>
         </ul>
-        <a href={CHECKOUT_GRATUITO} class="block w-full text-center text-[#2C3E99] font-bold text-xs md:text-base py-2.5 md:py-3 rounded-lg border-2 border-[#2C3E99] hover:bg-[#2C3E99] hover:text-white transition-colors">
-          INSCRIÇÃO GRATUITA
+        <a href={CHECKOUT_GRATUITO} class="block w-full text-center text-gray-900 font-semibold text-sm py-3 rounded-md border border-gray-900 hover:bg-gray-900 hover:text-white transition-colors">
+          Inscrição gratuita
         </a>
       </div>
 
-      {/* VIP - Card compacto */}
-      <div class="snap-center shrink-0 w-[85vw] md:w-auto bg-white rounded-2xl border-2 border-[#2C3E99] p-3 md:p-5 shadow-md flex flex-col">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-[10px] font-bold text-[#2C3E99] uppercase">VIP</span>
-          <span class="text-xl md:text-3xl font-black text-[#2C3E99]">R$ 19,70</span>
+      {/* VIP */}
+      <div class="bg-white rounded-lg border border-gray-200 p-5 md:p-6 flex flex-col">
+        <div class="mb-4 pb-4 border-b border-gray-100">
+          <p class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">VIP</p>
+          <p class="text-3xl font-bold text-gray-900">R$ 19,70</p>
         </div>
-        <ul class="space-y-1 text-gray-700 mb-3 flex-1 text-xs md:text-sm">
-          <li class="flex items-start gap-1.5">
-            <span class="text-[#4CAF50] font-bold">✓</span>
-            <span>Tudo do Gratuito + <strong>Gov.BR {SEMINARIO.cargaVip}</strong></span>
+        <ul class="space-y-2.5 text-sm text-gray-700 mb-5 flex-1">
+          <li class="flex items-start gap-2.5">
+            <span class="text-gray-400 mt-0.5">—</span>
+            <span>Tudo do Plano Gratuito</span>
           </li>
-          <li class="flex items-start gap-1.5">
-            <span class="text-[#4CAF50] font-bold">✓</span>
-            <span>Encontro com a Gua (30min antes)</span>
+          <li class="flex items-start gap-2.5">
+            <span class="text-gray-400 mt-0.5">—</span>
+            <span>Certificado Assinado no GOV.BR em PDF ({SEMINARIO.cargaVip})</span>
           </li>
-          <li class="flex items-start gap-1.5">
-            <span class="text-[#4CAF50] font-bold">✓</span>
-            <span>Replay + Material PDF</span>
+          <li class="flex items-start gap-2.5">
+            <span class="text-gray-400 mt-0.5">—</span>
+            <span>Encontro exclusivo com a Gua, 30 minutos antes da aula</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-gray-400 mt-0.5">—</span>
+            <span>Acesso vitalício à gravação</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-gray-400 mt-0.5">—</span>
+            <span>Material completo da aula em PDF</span>
           </li>
         </ul>
-        <a href={CHECKOUT_VIP} class="block w-full text-center text-white font-bold text-xs md:text-base py-2.5 md:py-3 rounded-lg bg-[#2C3E99]">
-          QUERO SER VIP
+        <a href={CHECKOUT_VIP} class="block w-full text-center text-white font-semibold text-sm py-3 rounded-md bg-gray-900 hover:bg-black transition-colors">
+          Quero ser VIP
         </a>
       </div>
 
-      {/* PLATINUM - Card compacto destacado */}
-      <div class="snap-center shrink-0 w-[85vw] md:w-auto relative bg-gradient-to-b from-[#faf5ff] via-white to-[#f5f3ff] rounded-2xl border-2 border-[#7C3AED] p-3 md:p-5 shadow-lg flex flex-col">
-        <span class="absolute -top-2 left-1/2 -translate-x-1/2 bg-[#7C3AED] text-white text-[8px] md:text-xs font-bold px-3 py-0.5 rounded-full whitespace-nowrap">
-          ⭐ MAIS ESCOLHIDO
+      {/* PLATINUM */}
+      <div class="bg-white rounded-lg border-2 border-gray-900 p-5 md:p-6 flex flex-col relative">
+        <span class="absolute -top-2.5 left-5 bg-gray-900 text-white text-[10px] font-semibold px-2.5 py-0.5 rounded uppercase tracking-wider">
+          Recomendado
         </span>
-        <div class="flex items-center justify-between mb-2 mt-1">
-          <span class="text-[10px] font-bold text-[#7C3AED] uppercase">Platinum</span>
-          <span class="text-xl md:text-3xl font-black text-[#7C3AED]">R$ 39,70</span>
+        <div class="mb-4 pb-4 border-b border-gray-100">
+          <p class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">Platinum</p>
+          <p class="text-3xl font-bold text-gray-900">R$ 39,70</p>
         </div>
-        <ul class="space-y-1 text-gray-700 mb-3 flex-1 text-xs md:text-sm">
-          <li class="flex items-start gap-1.5">
-            <span class="text-[#7C3AED] font-bold">✓</span>
-            <span>Tudo do VIP + <strong>Gov.BR {SEMINARIO.cargaPlatinum}</strong></span>
+        <ul class="space-y-2.5 text-sm text-gray-700 mb-5 flex-1">
+          <li class="flex items-start gap-2.5">
+            <span class="text-gray-400 mt-0.5">—</span>
+            <span>Todos os benefícios do Plano VIP</span>
           </li>
-          <li class="flex items-start gap-1.5">
-            <span class="text-[#7C3AED] font-bold">✓</span>
-            <span>Certificado físico + 15 Modelos</span>
+          <li class="flex items-start gap-2.5">
+            <span class="text-gray-400 mt-0.5">—</span>
+            <span>Certificado Assinado no GOV.BR em PDF ({SEMINARIO.cargaPlatinum})</span>
           </li>
-          <li class="flex items-start gap-1.5">
-            <span class="text-[#7C3AED] font-bold">✓</span>
-            <span>Grupo WhatsApp + Bônus</span>
+          <li class="flex items-start gap-2.5">
+            <span class="text-gray-400 mt-0.5">—</span>
+            <span>Certificado físico impresso enviado pelos Correios</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-gray-400 mt-0.5">—</span>
+            <span>15 Modelos Prontos de Relatórios</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-gray-400 mt-0.5">—</span>
+            <span>Grupo Aberto no WhatsApp para dúvidas e networking</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-gray-400 mt-0.5">—</span>
+            <span>Bônus: Aula extra gravada + Ebook</span>
           </li>
         </ul>
-        <a href={CHECKOUT_PLATINUM} class="block w-full text-center text-white font-bold text-xs md:text-base py-2.5 md:py-3 rounded-lg bg-[#7C3AED]">
-          QUERO PLATINUM
+        <a href={CHECKOUT_PLATINUM} class="block w-full text-center text-white font-semibold text-sm py-3 rounded-md bg-gray-900 hover:bg-black transition-colors">
+          Quero o Platinum
         </a>
       </div>
-    </div>
-
-    <!-- Indicador de scroll mobile -->
-    <p class="md:hidden text-center text-[10px] text-gray-400 mt-2">← Deslize para ver os planos →</p>
-  </div>
-</section>
-
-<!-- Seção de autoridade compacta (aparece em scroll) -->
-<section class="py-4 px-4 md:hidden bg-white border-t border-gray-100">
-  <div class="flex items-center gap-3 max-w-md mx-auto">
-    <div class="w-12 h-12 rounded-full bg-[#2C3E99]/10 flex-shrink-0 overflow-hidden">
-      <img src="/images/seminario/guaciara-foto.webp" alt="Guaciara" class="w-full h-full object-cover" />
-    </div>
-    <div>
-      <p class="text-xs font-bold text-gray-900">Com Guaciara Fornaciari</p>
-      <p class="text-[10px] text-gray-500">19 anos de experiência • 4.700+ professoras</p>
     </div>
   </div>
 </section>

@@ -1,33 +1,31 @@
 ---
 import { SEMINARIO } from '../config/seminario';
 ---
-<section class="bg-gradient-to-b from-[#2C3E99] to-[#1a2570] text-white pt-6 pb-4 px-4 md:pt-12 md:pb-16 md:px-6">
-  <div class="max-w-4xl mx-auto text-center">
-    <!-- Tag minimal -->
-    <span class="inline-block mb-3 px-3 py-1 rounded-full bg-white/15 border border-white/25 text-[10px] md:text-xs font-bold uppercase tracking-wider">
-      Seminário online • 100% gratuito
-    </span>
+<section class="bg-white border-b border-gray-200 py-10 md:py-16 px-5">
+  <div class="max-w-2xl mx-auto text-center">
 
-    <!-- Headline -->
-    <h1 class="text-lg md:text-3xl font-extrabold mb-2 leading-tight">
-      Participe do <span class="text-[#FFD54F]">Seminário de Relatórios</span> e descubra exatamente o que colocar no papel — com a técnica certa — nesse momento que vivemos.
-    </h1>
-
-    <!-- Sub-headline -->
-    <p class="text-sm md:text-base text-white/90 mb-3">
-      Aula online e gratuita + Certificado de 10 horas
+    <p class="text-[11px] md:text-xs font-medium text-gray-500 uppercase tracking-[0.2em] mb-5">
+      Seminário online · gratuito
     </p>
 
-    <!-- Data/hora inline -->
-    <div class="flex items-center justify-center gap-2 md:gap-4 mb-3 text-xs md:text-sm">
-      <span class="bg-white/10 px-3 py-1.5 rounded-lg">📅 {SEMINARIO.dataExibida}</span>
-      <span class="bg-white/10 px-3 py-1.5 rounded-lg">🕐 {SEMINARIO.horaExibida}</span>
-    </div>
+    <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-snug tracking-tight">
+      Participe do Seminário de Relatórios e descubra exatamente o que colocar no papel — com a técnica certa — nesse momento que vivemos.
+    </h1>
 
-    <!-- Certificado badge -->
-    <div class="inline-flex items-center gap-1 bg-[#4CAF50]/20 border border-[#4CAF50] rounded-full px-3 py-1 text-[10px] md:text-xs font-bold mb-4">
-      <span class="text-[#FFD54F]">+</span>
-      Certificado {SEMINARIO.cargaGratuita} — GRATUITO
+    <p class="text-sm md:text-base text-gray-600 mb-6">
+      Aula online e gratuita + Certificado de {SEMINARIO.cargaGratuita}
+    </p>
+
+    <div class="flex items-center justify-center gap-6 text-xs md:text-sm text-gray-700 mb-1">
+      <div>
+        <p class="text-gray-400 text-[10px] md:text-xs uppercase tracking-wider mb-0.5">Data</p>
+        <p class="font-semibold">{SEMINARIO.dataExibida}</p>
+      </div>
+      <div class="w-px h-8 bg-gray-200"></div>
+      <div>
+        <p class="text-gray-400 text-[10px] md:text-xs uppercase tracking-wider mb-0.5">Horário</p>
+        <p class="font-semibold">{SEMINARIO.horaExibida}</p>
+      </div>
     </div>
   </div>
 </section>
