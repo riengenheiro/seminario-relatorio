@@ -28,10 +28,10 @@ body {
 }
 
 :root {
-  /* Paleta Doutora Escola — Manual de Identidade Visual */
-  --azul:          #2C3E99;
+  /* Paleta da página */
+  --azul:          #e8590c;
   --azul-medio:    #7DB6E7;
-  --azul-escuro:   #1a2570;
+  --azul-escuro:   #111827;
   --laranja:       #e8590c;
   --laranja-claro: #ef9c65;
   --creme:         #FAF5EF;
@@ -40,7 +40,7 @@ body {
   --texto-suave:   #64748b;
 
   /* Aliases legados (não remover — usados em outros lugares) */
-  --color-primary:  #2C3E99;
+  --color-primary:  #e8590c;
   --color-secondary:#4CAF50;
   --color-accent:   #FF9800;
   --color-platinum: #7C3AED;
