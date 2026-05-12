@@ -1,6 +1,43 @@
 ---
+import { CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '../config/seminario';
 ---
 
+{/* ── FOOTER CTA ── */}
+<section class="py-16 md:py-24 px-6 text-center relative overflow-hidden" style="background-color: #1a2570;">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(125,182,231,0.10) 0%, transparent 70%);"></div>
+
+  <div class="max-w-2xl mx-auto relative">
+    <h2 class="text-2xl md:text-4xl font-bold text-white mb-4 leading-snug">
+      Você trabalhou muito<br />para passar despercebida.
+    </h2>
+    <p class="text-sm md:text-base mb-10 leading-relaxed" style="color: rgba(255,255,255,0.65);">
+      Garanta sua vaga agora e comece a ser reconhecida<br class="hidden md:block" />
+      pelo trabalho que você sempre fez com tanto amor.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a
+        href={CHECKOUT_GRATUITO}
+        class="font-semibold text-sm px-7 py-3.5 rounded-xl transition-all border"
+        style="color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.25);"
+        onmouseover="this.style.borderColor='rgba(255,255,255,0.6)'; this.style.color='white';"
+        onmouseout="this.style.borderColor='rgba(255,255,255,0.25)'; this.style.color='rgba(255,255,255,0.75)';"
+      >
+        Entrar grátis
+      </a>
+      <a
+        href={CHECKOUT_VIP}
+        class="text-white font-bold text-sm px-7 py-3.5 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+        style="background-color: #e8590c;"
+        onmouseover="this.style.backgroundColor='#c44a08'"
+        onmouseout="this.style.backgroundColor='#e8590c'"
+      >
+        Quero VIP ou Platinum →
+      </a>
+    </div>
+  </div>
+</section>
+
+{/* ── RODAPÉ ── */}
 <footer class="bg-gray-900 text-white py-14 px-6">
   <div class="max-w-5xl mx-auto">
     <div class="grid md:grid-cols-2 gap-12">

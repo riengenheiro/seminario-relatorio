@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seminário de Relatórios — Doutora Escola</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --vinho: #6B1E3A;
+  --vinho-escuro: #3D0E20;
+  --vinho-claro: #A3365A;
+  --dourado: #C9933A;
+  --dourado-claro: #E8BE7A;
+  --creme: #FAF5EF;
+  --creme-escuro: #F0E8DC;
+  --texto: #1A0A10;
+  --texto-suave: #6B4A55;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--creme);
+  color: var(--texto);
+  overflow-x: hidden;
+}
+
+.wrapper { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+/* HERO */
+.hero {
+  padding: 56px 0 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+@media(max-width:680px){
+  .hero { grid-template-columns: 1fr; gap: 40px; }
+  .hero-foto { order: -1; display: flex; flex-direction: column; align-items: center; }
+}
+
+.tag-evento {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dourado);
+  border: 1px solid var(--dourado-claro);
+  padding: 5px 16px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+
+.hero-texto h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 5vw, 50px);
+  line-height: 1.15;
+  color: var(--vinho-escuro);
+  margin-bottom: 20px;
+}
+.hero-texto h1 em { font-style: italic; color: var(--vinho); }
+
+.hero-dor {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--texto-suave);
+  font-weight: 300;
+  margin-bottom: 28px;
+}
+.hero-dor strong { color: var(--vinho); font-weight: 500; }
+
+.hero-pilares { display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px; }
+.pilar-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--texto); }
+.pilar-icon {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: white; border: 1px solid var(--creme-escuro);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(107,30,58,0.06);
+}
+
+.btn-hero {
+  display: inline-block;
+  background: var(--vinho); color: white;
+  padding: 16px 32px; border-radius: 12px;
+  font-size: 16px; font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-hero:hover { background: var(--vinho-escuro); }
+
+.vagas-nota {
+  margin-top: 12px; font-size: 12px; color: var(--texto-suave);
+  display: flex; align-items: center; gap: 6px;
+}
+.dot-vivo {
+  width: 7px; height: 7px; background: #E53935;
+  border-radius: 50%; animation: pulse 1.5s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+.hero-foto { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.foto-frame {
+  width: 300px; height: 360px; border-radius: 24px; overflow: hidden;
+  border: 3px solid white; box-shadow: 0 16px 64px rgba(107,30,58,0.18);
+  background: var(--creme-escuro);
+  display: flex; align-items: center; justify-content: center;
+}
+.foto-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.foto-placeholder {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 10px; padding: 24px; text-align: center;
+}
+.foto-placeholder span { font-size: 48px; }
+.foto-placeholder p { font-size: 13px; color: var(--texto-suave); font-weight: 300; line-height: 1.5; }
+
+.foto-badge {
+  background: var(--vinho-escuro); color: white;
+  border-radius: 14px; padding: 14px 20px; text-align: center;
+  width: 100%; max-width: 300px;
+}
+.foto-badge-nome { font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 4px; }
+.foto-badge-titulo { font-size: 12px; color: var(--dourado-claro); font-weight: 300; }
+
+hr.divisor { border: none; border-top: 1px solid var(--creme-escuro); }
+
+/* PLANOS */
+.planos-section { padding: 72px 0; }
+.section-label {
+  font-size: 11px; font-weight: 500; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--dourado);
+  text-align: center; margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4vw, 38px);
+  text-align: center; color: var(--vinho-escuro); margin-bottom: 8px;
+}
+.section-sub {
+  text-align: center; font-size: 15px; color: var(--texto-suave);
+  font-weight: 300; margin-bottom: 48px; line-height: 1.7;
+}
+
+.planos-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+@media(max-width:700px){ .planos-grid { grid-template-columns: 1fr; } }
+
+.plano-card {
+  background: white; border-radius: 24px; padding: 30px 24px;
+  border: 1.5px solid var(--creme-escuro);
+  display: flex; flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+.plano-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(107,30,58,0.10); }
+.plano-card.destaque { border-color: var(--dourado); box-shadow: 0 8px 40px rgba(201,147,58,0.15); }
+
+.destaque-tag {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background: var(--dourado); color: white;
+  font-size: 11px; font-weight: 500; letter-spacing: 1px;
+  padding: 4px 16px; border-radius: 100px; white-space: nowrap;
+}
+
+.plano-tier {
+  font-size: 10px; font-weight: 500; letter-spacing: 2.5px;
+  text-transform: uppercase; padding: 4px 12px; border-radius: 100px;
+  display: inline-block; margin-bottom: 14px;
+}
+.tier-gold { background: #FFF8EC; color: #A0640A; }
+.tier-vip  { background: #F5EEF8; color: #7D3C98; }
+.tier-dia  { background: var(--vinho-escuro); color: var(--dourado-claro); }
+
+.plano-nome { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--vinho-escuro); margin-bottom: 6px; }
+.plano-preco { font-size: 26px; font-weight: 500; color: var(--vinho); margin-bottom: 4px; }
+.plano-preco-sub { font-size: 12px; color: var(--texto-suave); font-weight: 300; margin-bottom: 20px; line-height: 1.6; }
+
+hr.plano-sep { border: none; border-top: 1px solid var(--creme-escuro); margin-bottom: 18px; }
+
+.plano-para { font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--dourado); margin-bottom: 8px; }
+.plano-desc { font-size: 13px; color: var(--texto-suave); line-height: 1.7; font-weight: 300; margin-bottom: 18px; }
+
+.plano-itens { list-style: none; margin-bottom: 24px; flex: 1; }
+.plano-itens li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 13px; color: var(--texto);
+  padding: 7px 0; border-bottom: 1px solid var(--creme-escuro); line-height: 1.5;
+}
+.plano-itens li:last-child { border: none; }
+.check { color: var(--dourado); flex-shrink: 0; margin-top: 2px; }
+.lock  { color: #CCC; flex-shrink: 0; margin-top: 2px; }
+.item-locked { color: #C4A9B0 !important; }
+
+.btn-plano {
+  display: block; text-align: center; padding: 14px;
+  border-radius: 12px; font-size: 15px; font-weight: 500;
+  text-decoration: none; transition: all 0.2s; cursor: pointer;
+  border: none; font-family: 'DM Sans', sans-serif;
+}
+.btn-gold { background: var(--creme-escuro); color: var(--vinho); border: 1.5px solid #E0CEC0; }
+.btn-gold:hover { background: #E8D5C4; }
+.btn-vip  { background: var(--vinho); color: white; }
+.btn-vip:hover { background: var(--vinho-escuro); }
+.btn-dia  { background: var(--vinho-escuro); color: var(--dourado-claro); }
+.btn-dia:hover { background: #2A0918; }
+
+.plano-vagas { text-align: center; font-size: 11px; color: var(--texto-suave); margin-top: 10px; }
+.plano-vagas strong { color: #E53935; font-weight: 500; }
+
+/* SALA DE EMBARQUE */
+.embarque-section {
+  background: var(--vinho-escuro); padding: 72px 0;
+  position: relative; overflow: hidden;
+}
+.embarque-section::before {
+  content: ''; position: absolute; top: -80px; right: -80px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,147,58,0.10) 0%, transparent 70%);
+}
+.embarque-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+}
+@media(max-width:680px){ .embarque-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.embarque-texto .section-label,
+.embarque-texto .section-title { text-align: left; }
+.embarque-texto .section-title { color: white; }
+.embarque-desc {
+  font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.85;
+  font-weight: 300; margin-top: 16px; margin-bottom: 0;
+}
+.embarque-desc strong { color: rgba(255,255,255,0.85); font-weight: 400; }
+
+.aulas-cards { display: flex; flex-direction: column; gap: 16px; }
+.aula-card {
+  border-radius: 16px; padding: 22px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.aula-card.livre { background: rgba(255,255,255,0.06); }
+.aula-card.exclusiva { background: rgba(201,147,58,0.10); border-color: rgba(201,147,58,0.25); }
+
+.aula-header {
+  display: flex; justify-content: space-between;
+  align-items: center; margin-bottom: 10px;
+}
+.aula-num { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+.aula-quem { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 100px; }
+.quem-todos { background: rgba(255,255,255,0.10); color: rgba(255,255,255,0.65); }
+.quem-vip   { background: rgba(201,147,58,0.20); color: var(--dourado-claro); }
+
+.aula-nome { font-family: 'Playfair Display', serif; font-size: 18px; color: white; margin-bottom: 6px; }
+.aula-desc { font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 300; line-height: 1.65; }
+.aula-lock { font-size: 12px; color: rgba(255,255,255,0.3); margin-top: 8px; font-style: italic; }
+
+/* CURRÍCULO */
+.curriculo-section { padding: 80px 0; }
+.curriculo-grid {
+  display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: start;
+}
+@media(max-width:680px){
+  .curriculo-grid { grid-template-columns: 1fr; }
+  .curriculo-foto-wrap { display: flex; justify-content: center; }
+}
+
+.curriculo-foto {
+  width: 100%; aspect-ratio: 3/4; border-radius: 20px; overflow: hidden;
+  background: var(--creme-escuro);
+  border: 3px solid white; box-shadow: 0 12px 48px rgba(107,30,58,0.14);
+  display: flex; align-items: center; justify-content: center;
+}
+.curriculo-foto img { width: 100%; height: 100%; object-fit: cover; }
+.foto-placeholder-cur {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 10px; padding: 24px; text-align: center;
+}
+.foto-placeholder-cur span { font-size: 48px; }
+.foto-placeholder-cur p { font-size: 13px; color: var(--texto-suave); font-weight: 300; }
+
+.curriculo-nome-tag { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--dourado); margin-bottom: 12px; }
+.curriculo-nome {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4vw, 34px);
+  color: var(--vinho-escuro); line-height: 1.2; margin-bottom: 20px;
+}
+.curriculo-bio {
+  font-size: 15px; color: var(--texto-suave);
+  line-height: 1.9; font-weight: 300; margin-bottom: 32px;
+}
+.curriculo-bio strong { color: var(--vinho); font-weight: 500; }
+
+.curriculo-numeros {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 28px;
+}
+@media(max-width:480px){ .curriculo-numeros { grid-template-columns: 1fr 1fr; } }
+
+.num-card {
+  background: white; border-radius: 14px; padding: 16px;
+  border: 1px solid var(--creme-escuro); text-align: center;
+}
+.num-valor { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--vinho); line-height: 1; margin-bottom: 4px; }
+.num-label { font-size: 11px; color: var(--texto-suave); font-weight: 300; line-height: 1.4; }
+
+.curriculo-selos { display: flex; flex-wrap: wrap; gap: 8px; }
+.selo {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--creme-escuro); border-radius: 100px;
+  padding: 6px 14px; font-size: 13px; color: var(--texto-suave); font-weight: 300;
+}
+.selo-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--dourado); flex-shrink: 0; }
+
+/* FOOTER CTA */
+.footer-cta {
+  background: var(--vinho-escuro); text-align: center;
+  padding: 72px 24px; position: relative; overflow: hidden;
+}
+.footer-cta::before {
+  content: ''; position: absolute; top: -100px; left: 50%;
+  transform: translateX(-50%); width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,147,58,0.10) 0%, transparent 70%);
+}
+.footer-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 4vw, 38px);
+  color: white; margin-bottom: 16px; position: relative; line-height: 1.3;
+}
+.footer-cta p {
+  font-size: 16px; color: rgba(255,255,255,0.6);
+  margin-bottom: 36px; font-weight: 300; line-height: 1.7; position: relative;
+}
+.footer-btns {
+  display: flex; gap: 12px; justify-content: center;
+  flex-wrap: wrap; position: relative;
+}
+.footer-btn {
+  padding: 14px 28px; border-radius: 12px;
+  font-size: 15px; font-weight: 500; text-decoration: none;
+  transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+}
+.footer-btn-free {
+  background: transparent; color: rgba(255,255,255,0.7);
+  border: 1.5px solid rgba(255,255,255,0.25);
+}
+.footer-btn-free:hover { border-color: white; color: white; }
+.footer-btn-vip { background: var(--dourado); color: white; border: none; }
+.footer-btn-vip:hover { background: var(--dourado-claro); }
+
+.fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.7s ease forwards; }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+.d1{animation-delay:.1s} .d2{animation-delay:.2s} .d3{animation-delay:.3s} .d4{animation-delay:.4s}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="wrapper">
+  <section class="hero">
+
+    <div class="hero-texto">
+      <div class="tag-evento fade-up">Seminário · Doutora Escola · 2026</div>
+
+      <h1 class="fade-up d1">
+        O seu relatório<br>pode <em>mudar uma vida.</em><br>A começar pela sua.
+      </h1>
+
+      <p class="hero-dor fade-up d2">
+        Você passa horas escrevendo relatórios que <strong>ninguém valoriza como deveria.</strong>
+        A diretora não comenta. Os pais mal olham. E você continua fazendo tudo isso no fim de semana,
+        sem reconhecimento nenhum.
+        <br><br>
+        No Seminário de Relatórios Doutora Escola, você vai descobrir como esse documento pode te dar
+        o que você sempre mereceu: <strong>visibilidade, autoridade e o reconhecimento da sua carreira.</strong>
+      </p>
+
+      <div class="hero-pilares fade-up d3">
+        <div class="pilar-item">
+          <div class="pilar-icon">❤️</div>
+          <span>Como um relatório pode salvar a vida de uma criança — a história real</span>
+        </div>
+        <div class="pilar-item">
+          <div class="pilar-icon">🏆</div>
+          <span>Como o relatório constrói sua autoridade e te faz ser procurada</span>
+        </div>
+        <div class="pilar-item">
+          <div class="pilar-icon">✨</div>
+          <span>É a hora de mostrar tudo que você construiu na sua carreira</span>
+        </div>
+      </div>
+
+      <div class="fade-up d4">
+        <a href="#planos" class="btn-hero">Ver os planos →</a>
+        <div class="vagas-nota">
+          <div class="dot-vivo"></div>
+          Inscrição pelo checkout · Vagas limitadas
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-foto fade-up d2">
+      <div class="foto-frame">
+        <img src="foto-especialista.jpg" alt="Especialista Doutora Escola"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="foto-placeholder" style="display:none">
+          <span>👩‍🏫</span>
+          <p>Adicione aqui a<br>foto da especialista</p>
+        </div>
+      </div>
+      <div class="foto-badge">
+        <p class="foto-badge-nome">Nome da Especialista</p>
+        <p class="foto-badge-titulo">Especialista em Educação Infantil · Doutora Escola</p>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<hr class="divisor">
+
+<!-- PLANOS -->
+<section class="planos-section" id="planos">
+  <div class="wrapper">
+    <p class="section-label">Escolha sua experiência</p>
+    <h2 class="section-title">Três ingressos. Uma transformação.</h2>
+    <p class="section-sub">
+      Cada plano é uma experiência diferente.<br>
+      Você escolhe o quanto quer mergulhar.
+    </p>
+
+    <div class="planos-grid">
+
+      <div class="plano-card">
+        <span class="plano-tier tier-gold">Gold</span>
+        <p class="plano-nome">Professora Gold</p>
+        <p class="plano-preco">Gratuito</p>
+        <p class="plano-preco-sub">+ material e certificado Gov.br<br>disponíveis por R$ 9,90 cada</p>
+        <hr class="plano-sep">
+        <p class="plano-para">Ideal para quem quer</p>
+        <p class="plano-desc">Participar ao vivo, sair com um certificado que comprova sua dedicação e dar o primeiro passo.</p>
+        <ul class="plano-itens">
+          <li><span class="check">✦</span> Acesso ao seminário ao vivo</li>
+          <li><span class="check">✦</span> Certificado digital gratuito</li>
+          <li><span class="check">✦</span> Sala de Embarque — Aula 1 ao vivo</li>
+          <li class="item-locked"><span class="lock">○</span> Sala VIP — Aula 2 exclusiva</li>
+          <li class="item-locked"><span class="lock">○</span> Grupo fechado de suporte</li>
+        </ul>
+        <a href="#" class="btn-plano btn-gold">Quero a vaga gratuita →</a>
+      </div>
+
+      <div class="plano-card destaque">
+        <div class="destaque-tag">⭐ Mais escolhido</div>
+        <span class="plano-tier tier-vip">VIP</span>
+        <p class="plano-nome">Professora VIP</p>
+        <p class="plano-preco">R$ 19,80</p>
+        <p class="plano-preco-sub">Material + Certificado Gov.br incluídos<br>Suporte e acesso exclusivo</p>
+        <hr class="plano-sep">
+        <p class="plano-para">Ideal para quem quer</p>
+        <p class="plano-desc">Ir além do seminário, ter suporte real para aplicar o conteúdo e se sentir parte de algo maior.</p>
+        <ul class="plano-itens">
+          <li><span class="check">✦</span> Tudo do plano Gold</li>
+          <li><span class="check">✦</span> Sala de Embarque — Aula 2 exclusiva ao vivo</li>
+          <li><span class="check">✦</span> Grupo fechado com suporte prioritário</li>
+          <li><span class="check">✦</span> Acesso 3 dias antes pelo seu link exclusivo</li>
+          <li><span class="check">✦</span> Página personalizada com o seu nome</li>
+          <li><span class="check">✦</span> Material da aula em PDF incluído</li>
+          <li><span class="check">✦</span> Certificado assinado no Gov.br incluído</li>
+        </ul>
+        <a href="#" class="btn-plano btn-vip">Quero ser VIP →</a>
+      </div>
+
+      <div class="plano-card">
+        <span class="plano-tier tier-dia">Diamond</span>
+        <p class="plano-nome">Professora Diamond</p>
+        <p class="plano-preco">R$ 49,90</p>
+        <p class="plano-preco-sub">Edição limitada · apenas 50 vagas<br>Número exclusivo #001 a #050</p>
+        <hr class="plano-sep">
+        <p class="plano-para">Ideal para quem quer</p>
+        <p class="plano-desc">A experiência completa, ter o certificado em mãos e se tornar Embaixadora Oficial Doutora Escola.</p>
+        <ul class="plano-itens">
+          <li><span class="check">✦</span> Tudo do plano VIP</li>
+          <li><span class="check">✦</span> Certificado físico enviado pelos Correios</li>
+          <li><span class="check">✦</span> Número de edição limitada (ex: #012 de 50)</li>
+          <li><span class="check">✦</span> Convite para indicar 2 colegas com desconto</li>
+          <li><span class="check">✦</span> Título: Embaixadora Oficial Doutora Escola</li>
+          <li><span class="check">✦</span> Área exclusiva Diamond na página personalizada</li>
+        </ul>
+        <a href="#" class="btn-plano btn-dia">Quero ser Diamond →</a>
+        <p class="plano-vagas"><strong>Poucas vagas restantes</strong> nesta edição</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SALA DE EMBARQUE -->
+<section class="embarque-section">
+  <div class="wrapper">
+    <div class="embarque-grid">
+      <div class="embarque-texto">
+        <p class="section-label">3 dias antes do seminário</p>
+        <h2 class="section-title">Sala de Embarque</h2>
+        <p class="embarque-desc">
+          Antes do grande dia, você acessa sua página exclusiva e já começa a aprender.
+          <strong>Não é um aquecimento qualquer</strong> — é uma aula ao vivo pelo Zoom, só para quem se inscreveu.
+          <br><br>
+          Professoras VIP e Diamond entram na Sala VIP: uma segunda aula, mais profunda, mais exclusiva.
+          Quem é Gold vê a porta — e sente o que está do outro lado.
+        </p>
+      </div>
+
+      <div class="aulas-cards">
+        <div class="aula-card livre">
+          <div class="aula-header">
+            <span class="aula-num">Aula 01</span>
+            <span class="aula-quem quem-todos">Todos os tiers</span>
+          </div>
+          <p class="aula-nome">Sala de Embarque</p>
+          <p class="aula-desc">Ao vivo pelo Zoom. Você chega preparada, sem surpresas, já sabendo o que vem. O aquecimento que transforma o dia do seminário.</p>
+        </div>
+        <div class="aula-card exclusiva">
+          <div class="aula-header">
+            <span class="aula-num">Aula 02</span>
+            <span class="aula-quem quem-vip">VIP e Diamond</span>
+          </div>
+          <p class="aula-nome">Sala VIP — Exclusiva</p>
+          <p class="aula-desc">Um encontro ao vivo mais aprofundado, só para quem escolheu ir além. Conteúdo que não será repetido em nenhuma outra edição.</p>
+          <p class="aula-lock">🔒 Disponível apenas para Professoras VIP e Diamond</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRÍCULO -->
+<section class="curriculo-section">
+  <div class="wrapper">
+    <div class="curriculo-grid">
+
+      <div class="curriculo-foto-wrap">
+        <div class="curriculo-foto">
+          <img src="foto-especialista-2.jpg" alt="Especialista"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="foto-placeholder-cur" style="display:none">
+            <span>👩‍🏫</span>
+            <p>Foto da especialista</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="curriculo-nome-tag">Quem vai te guiar</p>
+        <h2 class="curriculo-nome">Nome Completo<br>da Especialista</h2>
+        <p class="curriculo-bio">
+          <strong>Coloque aqui a história real.</strong> O momento em que um relatório mudou tudo — a vida de uma criança, o diagnóstico que ninguém tinha feito, a família que finalmente entendeu.
+          <br><br>
+          Essa história é o coração do projeto. É ela que faz a professora parar de rolar a tela e se reconhecer.
+          Quanto mais verdadeira e específica, mais poderosa.
+          <br><br>
+          Adicione a trajetória profissional, formação, e por que ela dedicou a vida a ensinar professoras a escrever relatórios que transformam.
+        </p>
+
+        <div class="curriculo-numeros">
+          <div class="num-card">
+            <p class="num-valor">+10k</p>
+            <p class="num-label">Professoras impactadas</p>
+          </div>
+          <div class="num-card">
+            <p class="num-valor">8 anos</p>
+            <p class="num-label">de experiência</p>
+          </div>
+          <div class="num-card">
+            <p class="num-valor">+500</p>
+            <p class="num-label">aulas realizadas</p>
+          </div>
+        </div>
+
+        <div class="curriculo-selos">
+          <div class="selo"><div class="selo-dot"></div>Especialista em Educação Infantil</div>
+          <div class="selo"><div class="selo-dot"></div>Formação em [área]</div>
+          <div class="selo"><div class="selo-dot"></div>Fundadora Doutora Escola</div>
+          <div class="selo"><div class="selo-dot"></div>Adicione conquistas reais</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <h2>Você trabalhou muito<br>para passar despercebida.</h2>
+  <p>
+    Garanta sua vaga agora e comece a ser reconhecida<br>
+    pelo trabalho que você sempre fez com tanto amor.
+  </p>
+  <div class="footer-btns">
+    <a href="#" class="footer-btn footer-btn-free">Entrar grátis (Gold)</a>
+    <a href="#" class="footer-btn footer-btn-vip">Quero VIP ou Diamond →</a>
+  </div>
+</section>
+
+</body>
+</html>

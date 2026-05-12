@@ -28,11 +28,23 @@ body {
 }
 
 :root {
-  --color-primary: #2C3E99;
-  --color-secondary: #4CAF50;
-  --color-accent: #FF9800;
+  /* Paleta Doutora Escola — Manual de Identidade Visual */
+  --azul:          #2C3E99;
+  --azul-medio:    #7DB6E7;
+  --azul-escuro:   #1a2570;
+  --laranja:       #e8590c;
+  --laranja-claro: #ef9c65;
+  --creme:         #FAF5EF;
+  --neutro:        #DEDCD0;
+  --texto:         #1a1a2e;
+  --texto-suave:   #64748b;
+
+  /* Aliases legados (não remover — usados em outros lugares) */
+  --color-primary:  #2C3E99;
+  --color-secondary:#4CAF50;
+  --color-accent:   #FF9800;
   --color-platinum: #7C3AED;
-  --color-surface: #F5F5F5;
+  --color-surface:  #F5F5F5;
 }
 
 h1, h2, h3 {
