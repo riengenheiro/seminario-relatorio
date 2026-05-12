@@ -1,49 +1,78 @@
 ---
 ---
-<section class="bg-white border-t border-gray-100 py-10 px-5">
-  <div class="max-w-5xl mx-auto">
+<section class="bg-gray-50 border-t border-gray-100 py-12 md:py-20 px-5">
+  <div class="max-w-4xl mx-auto">
 
-    <div class="flex flex-col md:flex-row items-center md:items-start gap-5 md:gap-8">
+    <h2 class="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-8 md:mb-10">
+      Quem conduz o Seminário
+    </h2>
 
-      {/* Foto */}
-      <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-gray-200 flex-shrink-0 bg-gray-100">
-        <img
-          src="/images/seminario/guaciara-foto.webp"
-          alt="Guaciara Fornaciari"
-          class="w-full h-full object-cover"
-          width="80"
-          height="80"
-        />
+    <div class="grid md:grid-cols-[280px_1fr] gap-8 md:gap-10 items-start">
+      <div class="flex justify-center md:justify-start">
+        <div class="relative w-full max-w-[280px] aspect-[1024/1536] rounded-2xl overflow-hidden border-4 border-[#2C3E99]/30 shadow-xl bg-[#2C3E99]/10 flex items-center justify-center">
+          <img
+            src="/images/seminario/guaciara-foto.webp"
+            alt="Dra. Guaciara Fornaciari"
+            class="w-full h-full object-cover object-center"
+            width="1024"
+            height="1536"
+          />
+        </div>
       </div>
 
-      {/* Texto */}
-      <div class="text-center md:text-left flex-1">
-        <p class="text-[11px] font-semibold uppercase tracking-[0.2em] mb-1" style="color: #e8590c;">Quem conduz o Seminário</p>
-        <h2 class="text-lg md:text-xl font-bold text-gray-900 mb-1">Guaciara Fornaciari</h2>
-        <p class="text-sm text-gray-500 mb-3">Fonoaudióloga · Professora · Ex-coordenadora pedagógica</p>
-        <p class="text-sm text-gray-700 leading-relaxed">
-          Criadora da Fábrica Mágica, plataforma com mais de <strong>4.747 professoras</strong> em todo o Brasil.
-          Mais de <strong>19 anos</strong> de experiência na Educação Infantil e mais de <strong>500 aulas</strong> realizadas.
+      <div class="text-center md:text-left">
+        <p class="text-xl font-bold text-gray-900 mb-2">Dra. Guaciara Fornaciari</p>
+        <p class="text-gray-600 mb-4">Fonoaudióloga | Professora | Ex-coordenadora pedagógica</p>
+
+        <div class="bg-[#2C3E99]/5 rounded-xl p-4 mb-6 text-left">
+          <p class="font-semibold text-[#2C3E99] mb-2 text-sm uppercase tracking-wider">Credenciais profissionais</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-[#4CAF50] shrink-0">✓</span>
+              <span>Pós-Graduada em Educação Especial</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#4CAF50] shrink-0">✓</span>
+              <span>Certificação Internacional em Autismo</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#4CAF50] shrink-0">✓</span>
+              <span>Mais de 19 anos de experiência na Educação Infantil</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-6">
+          <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-gray-200">
+            <p class="text-2xl md:text-3xl font-black text-[#FF9800]">4.747</p>
+            <p class="text-xs text-gray-600">Professoras na Fábrica Mágica</p>
+          </div>
+          <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-gray-200">
+            <p class="text-2xl md:text-3xl font-black text-[#2C3E99]">12.479</p>
+            <p class="text-xs text-gray-600">Documentos gerados</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 mb-4 text-sm md:text-base leading-relaxed">
+          Criadora da <strong>Fábrica Mágica</strong>, plataforma que hoje atende mais de 4.747 professoras em todo o Brasil. Já ajudei mais de 2.000 professoras a transformarem suas práticas e geramos juntas mais de 12.479 documentos pedagógicos.
+        </p>
+
+        <p class="text-gray-700 mb-4 text-sm md:text-base leading-relaxed">
+          Neste Seminário compartilho o método que uso há quase duas décadas para escrever relatórios técnicos, dentro da BNCC, com clareza — mesmo nas situações mais delicadas.
+        </p>
+
+        <p class="font-semibold text-gray-900 mb-2 text-sm md:text-base">Sou especialista em:</p>
+        <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1 text-sm md:text-base text-left inline-block md:block">
+          <li>BNCC e Campos de Experiências</li>
+          <li>Inclusão escolar (TEA, TDAH, deficiências)</li>
+          <li>Relatórios e documentação pedagógica</li>
+          <li>Planejamento e avaliação na EI</li>
+        </ul>
+
+        <p class="text-gray-700 text-sm md:text-base leading-relaxed">
+          Minha missão é <strong>SIMPLIFICAR</strong> a vida de quem educa.
         </p>
       </div>
-
-      {/* Números — só desktop */}
-      <div class="hidden md:flex gap-4 flex-shrink-0">
-        <div class="text-center px-4 py-3 bg-gray-50 rounded-xl border border-gray-100">
-          <p class="text-xl font-bold" style="color: #e8590c;">4.747</p>
-          <p class="text-[11px] text-gray-500 leading-tight">professoras</p>
-        </div>
-        <div class="text-center px-4 py-3 bg-gray-50 rounded-xl border border-gray-100">
-          <p class="text-xl font-bold" style="color: #e8590c;">19 anos</p>
-          <p class="text-[11px] text-gray-500 leading-tight">experiência</p>
-        </div>
-        <div class="text-center px-4 py-3 bg-gray-50 rounded-xl border border-gray-100">
-          <p class="text-xl font-bold" style="color: #e8590c;">+500</p>
-          <p class="text-[11px] text-gray-500 leading-tight">aulas</p>
-        </div>
-      </div>
-
     </div>
-
   </div>
 </section>

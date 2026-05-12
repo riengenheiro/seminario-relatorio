@@ -17,12 +17,12 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
 
     <div class="grid md:grid-cols-3 gap-5">
 
-      {/* ── GRATUITO ── */}
+      {/* ── GOLD ── */}
       <div class="bg-white rounded-2xl p-6 border border-gray-200 flex flex-col shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
-        <span class="inline-block self-start text-[10px] font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4 bg-gray-100 text-gray-500">
-          Gratuito
+        <span class="inline-block self-start text-[10px] font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4 bg-amber-50 text-amber-800 border border-amber-200">
+          GOLD
         </span>
-        <p class="text-xl font-bold text-gray-900 mb-1">Professora Gratuita</p>
+        <p class="text-xl font-bold text-gray-900 mb-1">Professora Gold</p>
         <p class="text-3xl font-bold text-gray-900 mb-1">R$ 0</p>
         <p class="text-xs text-gray-400 mb-5 leading-relaxed">
           + material e certificado Gov.br<br />disponíveis por R$ 9,90 cada
@@ -60,21 +60,21 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
 
         <a
           href={CHECKOUT_GRATUITO}
-          class="block w-full text-center text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
-          style="background-color: #e8590c;"
-          onmouseover="this.style.backgroundColor='#c44a08'"
-          onmouseout="this.style.backgroundColor='#e8590c'"
+          class="block w-full text-center font-semibold text-sm py-3.5 rounded-xl transition-all border border-orange-200"
+          style="background-color: #fff7ed; color: #c2410c;"
+          onmouseover="this.style.backgroundColor='#ffedd5'; this.style.borderColor='#fdba74'"
+          onmouseout="this.style.backgroundColor='#fff7ed'; this.style.borderColor='#fed7aa'"
         >
-          Quero a vaga gratuita →
+          Quero a vaga Gold →
         </a>
       </div>
 
       {/* ── VIP ── */}
       <div class="bg-white rounded-2xl p-6 flex flex-col shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-200 relative border-2 border-gray-800">
-        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold uppercase tracking-wider px-4 py-1 rounded-full whitespace-nowrap" style="background-color: #e8590c;">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold uppercase tracking-wider px-4 py-1 rounded-full whitespace-nowrap" style="background-color: #16a34a;">
           ⭐ Mais escolhido
         </div>
-        <span class="inline-block self-start text-[10px] font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4 text-white" style="background-color: #e8590c;">
+        <span class="inline-block self-start text-[10px] font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4 text-white" style="background-color: #16a34a;">
           VIP
         </span>
         <p class="text-xl font-bold text-gray-900 mb-1">Professora VIP</p>
@@ -93,7 +93,7 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
         <ul class="flex flex-col gap-2.5 mb-6 flex-1">
           <li class="flex items-start gap-2.5 text-sm text-gray-700">
             <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
-            Tudo do plano Gratuito
+            Tudo do plano Gold
           </li>
           <li class="flex items-start gap-2.5 text-sm text-gray-700">
             <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
@@ -116,9 +116,9 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
         <a
           href={CHECKOUT_VIP}
           class="block w-full text-center text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
-          style="background-color: #e8590c;"
-          onmouseover="this.style.backgroundColor='#c44a08'"
-          onmouseout="this.style.backgroundColor='#e8590c'"
+          style="background-color: #16a34a;"
+          onmouseover="this.style.backgroundColor='#15803d'"
+          onmouseout="this.style.backgroundColor='#16a34a'"
         >
           Quero ser VIP →
         </a>
