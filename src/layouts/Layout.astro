@@ -47,15 +47,25 @@ const {
   <body>
     <slot />
 
-    {/* Aviso de Cookies - discreto no rodapé */}
-    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900/95 text-white text-xs md:text-sm py-3 px-4 md:px-6 z-50 backdrop-blur-sm border-t border-gray-700" style="display: none;">
-      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
-        <p class="text-center md:text-left text-white/80">
-          Este site utiliza cookies para melhorar sua experiência e rastreamento de conversões.
-          <a href="https://doutoraescola.com.br/privacidade/privacidade.html" target="_blank" rel="noopener noreferrer" class="underline hover:text-white ml-1">Saiba mais</a>
+    {/* Cookies — popup discreto */}
+    <div
+      id="cookie-banner"
+      role="dialog"
+      aria-label="Uso de cookies"
+      class="fixed z-50 max-w-md w-[calc(100%-2rem)] md:w-full left-4 right-4 md:left-auto md:right-6 bottom-4 md:bottom-6 mx-auto md:mx-0 rounded-2xl border border-gray-200/80 bg-white/95 text-gray-600 text-xs leading-relaxed shadow-lg backdrop-blur-sm px-4 py-3.5 md:px-5 md:py-4"
+      style="display: none;"
+    >
+      <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+        <p class="flex-1 text-left">
+          Usamos cookies para personalizar conteúdos e melhorar a sua experiência.
+          <a href="https://doutoraescola.com.br/privacidade/privacidade.html" target="_blank" rel="noopener noreferrer" class="text-[#2C3E99] underline underline-offset-2 hover:text-[#1a2570] whitespace-nowrap">Saiba mais</a>
         </p>
-        <button id="cookie-accept" class="shrink-0 bg-white/10 hover:bg-white/20 text-white px-4 py-1.5 rounded-lg transition-colors text-xs font-medium border border-white/20">
-          Entendi
+        <button
+          type="button"
+          id="cookie-accept"
+          class="shrink-0 self-end sm:self-center bg-gray-900 hover:bg-gray-800 text-white text-xs font-semibold uppercase tracking-wide px-4 py-2 rounded-lg transition-colors"
+        >
+          Ok
         </button>
       </div>
     </div>

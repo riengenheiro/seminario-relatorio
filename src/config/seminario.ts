@@ -9,10 +9,10 @@ export const SITE_URL = 'https://seminario.doutoraescola.com.br';
 
 export const SEMINARIO = {
   nome: 'Seminário de Relatórios',
-  /** Data exibida no Hero, ex.: "Quarta, 12 de junho" */
-  dataExibida: '26/05/2026',
-  /** Hora exibida no Hero, ex.: "19h30 (horário de Brasília)" */
-  horaExibida: '19:30',
+  /** Data exibida (ex.: obrigado, hero), texto legível */
+  dataExibida: '26 de maio',
+  /** Hora exibida */
+  horaExibida: '19h37',
   /** Carga horária do certificado gratuito (texto livre) */
   cargaGratuita: '10 horas',
   cargaVip: '15 horas',

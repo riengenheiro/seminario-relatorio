@@ -23,10 +23,7 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
           GOLD
         </span>
         <p class="text-xl font-bold text-gray-900 mb-1">Professora Gold</p>
-        <p class="text-3xl font-bold text-gray-900 mb-1">R$ 0</p>
-        <p class="text-xs text-gray-400 mb-5 leading-relaxed">
-          + material e certificado Gov.br<br />disponíveis por R$ 9,90 cada
-        </p>
+        <p class="text-3xl font-bold text-gray-900 mb-5">R$ 0</p>
 
         <hr class="border-gray-100 mb-5" />
 
@@ -44,6 +41,10 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
             <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
             Certificado digital gratuito ({SEMINARIO.cargaGratuita})
           </li>
+          <li class="flex items-start gap-2.5 text-sm text-gray-700">
+            <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
+            Grupo fechado no WhatsApp para receber notificações
+          </li>
           <li class="flex items-start gap-2.5 text-sm text-gray-400">
             <span class="mt-0.5 flex-shrink-0">○</span>
             <span>Sala VIP — encontro exclusivo no Zoom</span>
@@ -60,7 +61,7 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
 
         <a
           href={CHECKOUT_GRATUITO}
-          class="block w-full text-center font-semibold text-sm py-3.5 rounded-xl transition-all border border-orange-200"
+          class="block w-full text-center font-bold text-base uppercase tracking-wide py-4 rounded-xl transition-all border border-orange-200"
           style="background-color: #fff7ed; color: #c2410c;"
           onmouseover="this.style.backgroundColor='#ffedd5'; this.style.borderColor='#fdba74'"
           onmouseout="this.style.backgroundColor='#fff7ed'; this.style.borderColor='#fed7aa'"
@@ -78,10 +79,7 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
           VIP
         </span>
         <p class="text-xl font-bold text-gray-900 mb-1">Professora VIP</p>
-        <p class="text-3xl font-bold text-gray-900 mb-1">R$ 19,70</p>
-        <p class="text-xs text-gray-400 mb-5 leading-relaxed">
-          Sala VIP + certificado Gov.br incluídos<br />acesso à gravação
-        </p>
+        <p class="text-3xl font-bold text-gray-900 mb-5">R$ 19,70</p>
 
         <hr class="border-gray-100 mb-5" />
 
@@ -94,6 +92,10 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
           <li class="flex items-start gap-2.5 text-sm text-gray-700">
             <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
             Tudo do plano Gold
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-gray-700">
+            <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
+            Grupo fechado no WhatsApp para receber notificações
           </li>
           <li class="flex items-start gap-2.5 text-sm text-gray-700">
             <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
@@ -115,7 +117,7 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
 
         <a
           href={CHECKOUT_VIP}
-          class="block w-full text-center text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+          class="block w-full text-center text-white font-bold text-base uppercase tracking-wide py-4 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
           style="background-color: #16a34a;"
           onmouseover="this.style.backgroundColor='#15803d'"
           onmouseout="this.style.backgroundColor='#16a34a'"
@@ -130,10 +132,7 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
           Platinum
         </span>
         <p class="text-xl font-bold text-gray-900 mb-1">Professora Platinum</p>
-        <p class="text-3xl font-bold text-gray-900 mb-1">R$ 39,70</p>
-        <p class="text-xs text-gray-400 mb-5 leading-relaxed">
-          Certificado físico pelos Correios<br />+ todos os benefícios VIP
-        </p>
+        <p class="text-3xl font-bold text-gray-900 mb-5">R$ 39,70</p>
 
         <hr class="border-gray-100 mb-5" />
 
@@ -146,6 +145,10 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
           <li class="flex items-start gap-2.5 text-sm text-gray-700">
             <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
             Tudo do plano VIP
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-gray-700">
+            <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
+            Grupo aberto no WhatsApp com suporte prioritário
           </li>
           <li class="flex items-start gap-2.5 text-sm text-gray-700">
             <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
@@ -167,7 +170,7 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
 
         <a
           href={CHECKOUT_PLATINUM}
-          class="block w-full text-center text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
+          class="block w-full text-center text-white font-bold text-base uppercase tracking-wide py-4 rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
           style="background-color: #e8590c;"
           onmouseover="this.style.backgroundColor='#c44a08'"
           onmouseout="this.style.backgroundColor='#e8590c'"

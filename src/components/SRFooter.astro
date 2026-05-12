@@ -1,60 +1,59 @@
 ---
 ---
 
-{/* ── FOOTER CTA ── */}
-<section class="py-16 md:py-24 px-6 text-center relative overflow-hidden" style="background-color: #1a2570;">
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(125,182,231,0.10) 0%, transparent 70%);"></div>
-
-  <div class="max-w-2xl mx-auto relative">
-    <h2 class="text-2xl md:text-4xl font-bold text-white mb-4 leading-snug">
-      Você trabalhou muito<br />para passar despercebida.
-    </h2>
-    <p class="text-sm md:text-base mb-10 leading-relaxed" style="color: rgba(255,255,255,0.65);">
-      Garanta sua vaga agora e comece a ser reconhecida<br class="hidden md:block" />
-      pelo trabalho que você sempre fez com tanto amor.
+{/* Faixa final compacta (antes do rodapé legal) */}
+<section class="py-8 md:py-10 px-5 text-center border-t border-white/10" style="background-color: #1a2570;">
+  <div class="max-w-2xl mx-auto">
+    <p class="text-base md:text-lg font-semibold text-white mb-2 leading-snug">
+      Você trabalhou muito para passar despercebida.
     </p>
-    <div class="flex flex-wrap gap-3 justify-center">
+    <p class="text-xs md:text-sm mb-5" style="color: rgba(255,255,255,0.6);">
+      Garanta sua vaga e comece a ser reconhecida pelo trabalho que você sempre fez.
+    </p>
+    <div class="flex flex-wrap gap-2 justify-center">
       <a
         href="#tiers"
-        class="font-semibold text-sm px-7 py-3.5 rounded-xl transition-all border"
-        style="color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.25);"
-        onmouseover="this.style.borderColor='rgba(255,255,255,0.6)'; this.style.color='white';"
-        onmouseout="this.style.borderColor='rgba(255,255,255,0.25)'; this.style.color='rgba(255,255,255,0.75)';"
+        class="font-semibold text-sm uppercase tracking-wide px-5 py-2.5 rounded-lg transition-all border"
+        style="color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.25);"
+        onmouseover="this.style.borderColor='rgba(255,255,255,0.5)'; this.style.color='white';"
+        onmouseout="this.style.borderColor='rgba(255,255,255,0.25)'; this.style.color='rgba(255,255,255,0.8)';"
       >
         Entrar grátis
       </a>
       <a
         href="#tiers"
-        class="text-white font-bold text-sm px-7 py-3.5 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+        class="text-white font-bold text-sm uppercase tracking-wide px-5 py-2.5 rounded-lg transition-all"
         style="background-color: #e8590c;"
         onmouseover="this.style.backgroundColor='#c44a08'"
         onmouseout="this.style.backgroundColor='#e8590c'"
       >
-        Quero VIP ou Platinum →
+        VIP ou Platinum →
       </a>
     </div>
   </div>
 </section>
 
-{/* ── RODAPÉ ── */}
-<footer class="bg-gray-900 text-white py-14 px-6">
+<footer class="bg-gray-950 text-white/70 py-6 md:py-8 px-5 text-xs md:text-sm border-t border-white/5">
   <div class="max-w-5xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-12">
-      <div>
-        <p class="font-bold text-2xl mb-3">DOUTORA ESCOLA</p>
-        <p class="text-white/80 mb-4">Transformando a Educação Infantil, uma professora por vez.</p>
-        <p class="font-semibold text-lg mb-4 text-white/80">TODOS OS DIREITOS RESERVADOS - DOUTORA ESCOLA © 2025</p>
-        <p class="text-base text-white/70 leading-relaxed mb-4">Este site não faz parte do site do Facebook ou Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de forma alguma. FACEBOOK é uma marca comercial da FACEBOOK, Inc.</p>
-        <p class="text-sm text-white/50">Ambiente seguro (SSL) · Mais de 2.000 professoras satisfeitas · Avaliação 4.9/5</p>
-        <p class="text-sm text-white/50 mt-2">Developed by dvzDesing</p>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 md:gap-8">
+      <div class="space-y-2">
+        <p class="font-bold text-white text-sm tracking-wide">DOUTORA ESCOLA</p>
+        <p class="text-white/60 max-w-md leading-relaxed">
+          Transformando a Educação Infantil, uma professora por vez.
+        </p>
+        <p class="text-white/40 text-[11px] leading-relaxed max-w-xl">
+          Este site não faz parte do Facebook Inc. FACEBOOK é marca comercial da FACEBOOK, Inc.
+        </p>
       </div>
-      <div class="flex flex-col justify-center">
-        <ul class="space-y-3 text-lg">
-          <li><a href="https://doutoraescola.com.br/privacidade/privacidade.html" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white hover:underline transition-colors">Política de Privacidade</a></li>
-          <li><a href="https://doutoraescola.com.br/privacidade/termo.html" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white hover:underline transition-colors">Termos de Uso</a></li>
-          <li><a href="https://api.whatsapp.com/send?phone=5519989863544" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white hover:underline transition-colors">Contato via WhatsApp</a></li>
-        </ul>
-      </div>
+      <nav class="flex flex-col sm:flex-row sm:flex-wrap gap-x-5 gap-y-2 shrink-0">
+        <a href="https://doutoraescola.com.br/privacidade/privacidade.html" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white underline-offset-2 hover:underline">Privacidade</a>
+        <a href="https://doutoraescola.com.br/privacidade/termo.html" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white underline-offset-2 hover:underline">Termos</a>
+        <a href="https://api.whatsapp.com/send?phone=5519989863544" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white underline-offset-2 hover:underline">WhatsApp</a>
+      </nav>
+    </div>
+    <div class="mt-5 pt-4 border-t border-white/10 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between text-[11px] text-white/45">
+      <span>© 2025 Doutora Escola · Todos os direitos reservados · SSL · +2.000 professoras · 4,9/5</span>
+      <span class="text-white/35 shrink-0">Developed by dvzDesing</span>
     </div>
   </div>
 </footer>

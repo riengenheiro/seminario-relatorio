@@ -33,20 +33,26 @@ import { SEMINARIO } from '../config/seminario';
         {/* H1 */}
         <h1 class="text-2xl md:text-[2.1rem] font-bold text-gray-900 mb-4 leading-snug tracking-tight">
           Participe do Seminário de Relatórios e{' '}
-          <span style="color: #e8590c;">descubra exatamente o que colocar no papel — com a técnica certa</span>
+          <span class="uppercase tracking-tight" style="color: #e8590c;">descubra exatamente o que colocar no papel — com a técnica certa</span>
           {' '}— nesse momento que vivemos.
         </h1>
 
-        {/* Sub */}
-        <p class="text-sm md:text-base text-gray-600 mb-6 font-medium">
+        {/* Sub + data + reforço */}
+        <p class="text-sm md:text-base text-gray-600 mb-2 font-medium">
           Aula online e gratuita + Certificado de {SEMINARIO.cargaGratuita}
+        </p>
+        <p class="text-sm md:text-base font-semibold text-gray-900 mb-1">
+          {SEMINARIO.dataExibida} às {SEMINARIO.horaExibida}
+        </p>
+        <p class="text-sm md:text-base text-gray-600 mb-6">
+          As aulas são 100% online e gratuitas
         </p>
 
         {/* CTA principal — leva aos planos (#tiers) */}
         <div class="mb-5">
           <a
             href="#tiers"
-            class="inline-block w-full md:w-auto text-center text-white font-bold text-base px-8 py-4 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
+            class="inline-block w-full md:w-auto text-center text-white font-bold text-lg md:text-xl uppercase tracking-wide px-8 py-4 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
             style="background-color: #e8590c;"
             onmouseover="this.style.backgroundColor='#c44a08'"
             onmouseout="this.style.backgroundColor='#e8590c'"
@@ -58,18 +64,6 @@ import { SEMINARIO } from '../config/seminario';
             100% gratuito · vagas limitadas
           </p>
         </div>
-
-        {/* Link secundário para planos pagos */}
-        <a href="#tiers" class="text-sm font-medium mb-6 self-start" style="color: #2C3E99;">
-          Ver planos VIP e Platinum ↓
-        </a>
-
-        {/* Data e hora — linha compacta */}
-        <p class="text-sm text-gray-500">
-          📅 <strong class="text-gray-700">{SEMINARIO.dataExibida}</strong>
-          &nbsp;·&nbsp;
-          🕐 <strong class="text-gray-700">{SEMINARIO.horaExibida}</strong>
-        </p>
 
       </div>
 
