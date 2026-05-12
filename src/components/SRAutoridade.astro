@@ -1,86 +1,49 @@
 ---
 ---
-<section class="bg-white py-14 md:py-20 px-5 border-t border-gray-100">
+<section class="bg-white border-t border-gray-100 py-10 px-5">
   <div class="max-w-5xl mx-auto">
 
-    <p class="text-center text-[11px] md:text-xs font-semibold uppercase tracking-[0.2em] mb-10" style="color: #e8590c;">
-      Quem vai te guiar
-    </p>
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-5 md:gap-8">
 
-    <div class="grid md:grid-cols-[260px_1fr] gap-10 md:gap-14 items-start">
+      {/* Foto */}
+      <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-gray-200 flex-shrink-0 bg-gray-100">
+        <img
+          src="/images/seminario/guaciara-foto.webp"
+          alt="Guaciara Fornaciari"
+          class="w-full h-full object-cover"
+          width="80"
+          height="80"
+        />
+      </div>
 
-      {/* ── FOTO ── */}
-      <div class="flex justify-center md:justify-start">
-        <div class="w-56 md:w-full aspect-[3/4] rounded-2xl overflow-hidden border-4 border-white shadow-xl bg-gray-100 flex items-center justify-center">
-          <img
-            src="/images/seminario/guaciara-foto.webp"
-            alt="Guaciara Fornaciari"
-            class="w-full h-full object-cover"
-            width="320"
-            height="426"
-          />
+      {/* Texto */}
+      <div class="text-center md:text-left flex-1">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.2em] mb-1" style="color: #e8590c;">Quem conduz o Seminário</p>
+        <h2 class="text-lg md:text-xl font-bold text-gray-900 mb-1">Guaciara Fornaciari</h2>
+        <p class="text-sm text-gray-500 mb-3">Fonoaudióloga · Professora · Ex-coordenadora pedagógica</p>
+        <p class="text-sm text-gray-700 leading-relaxed">
+          Criadora da Fábrica Mágica, plataforma com mais de <strong>4.747 professoras</strong> em todo o Brasil.
+          Mais de <strong>19 anos</strong> de experiência na Educação Infantil e mais de <strong>500 aulas</strong> realizadas.
+        </p>
+      </div>
+
+      {/* Números — só desktop */}
+      <div class="hidden md:flex gap-4 flex-shrink-0">
+        <div class="text-center px-4 py-3 bg-gray-50 rounded-xl border border-gray-100">
+          <p class="text-xl font-bold" style="color: #e8590c;">4.747</p>
+          <p class="text-[11px] text-gray-500 leading-tight">professoras</p>
+        </div>
+        <div class="text-center px-4 py-3 bg-gray-50 rounded-xl border border-gray-100">
+          <p class="text-xl font-bold" style="color: #e8590c;">19 anos</p>
+          <p class="text-[11px] text-gray-500 leading-tight">experiência</p>
+        </div>
+        <div class="text-center px-4 py-3 bg-gray-50 rounded-xl border border-gray-100">
+          <p class="text-xl font-bold" style="color: #e8590c;">+500</p>
+          <p class="text-[11px] text-gray-500 leading-tight">aulas</p>
         </div>
       </div>
 
-      {/* ── CONTEÚDO ── */}
-      <div>
-        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-1">Guaciara Fornaciari</h2>
-        <p class="text-sm mb-6" style="color: #e8590c; font-weight: 500;">
-          Fonoaudióloga · Professora · Ex-coordenadora pedagógica
-        </p>
-
-        <p class="text-sm md:text-base text-gray-700 leading-relaxed mb-3">
-          Criadora da Fábrica Mágica, plataforma que hoje atende mais de
-          <strong class="text-gray-900">4.747 professoras</strong> em todo o Brasil. Mais de 19 anos de experiência
-          na Educação Infantil.
-        </p>
-        <p class="text-sm md:text-base text-gray-700 leading-relaxed mb-8">
-          Neste Seminário compartilha o método que usa há quase duas décadas
-          para escrever relatórios técnicos, dentro da BNCC, com clareza —
-          mesmo nas situações mais delicadas.
-        </p>
-
-        {/* Números */}
-        <div class="grid grid-cols-3 gap-3 mb-8">
-          <div class="bg-gray-50 rounded-2xl p-4 text-center border border-gray-100">
-            <p class="text-2xl font-bold mb-1" style="color: #2C3E99;">4.747</p>
-            <p class="text-xs text-gray-500 leading-tight">Professoras impactadas</p>
-          </div>
-          <div class="bg-gray-50 rounded-2xl p-4 text-center border border-gray-100">
-            <p class="text-2xl font-bold mb-1" style="color: #2C3E99;">19 anos</p>
-            <p class="text-xs text-gray-500 leading-tight">de experiência</p>
-          </div>
-          <div class="bg-gray-50 rounded-2xl p-4 text-center border border-gray-100">
-            <p class="text-2xl font-bold mb-1" style="color: #2C3E99;">+500</p>
-            <p class="text-xs text-gray-500 leading-tight">aulas realizadas</p>
-          </div>
-        </div>
-
-        {/* Selos */}
-        <div class="flex flex-wrap gap-2">
-          <div class="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-full px-4 py-1.5">
-            <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: #e8590c;"></span>
-            <span class="text-xs text-gray-600">Fonoaudióloga</span>
-          </div>
-          <div class="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-full px-4 py-1.5">
-            <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: #e8590c;"></span>
-            <span class="text-xs text-gray-600">Professora</span>
-          </div>
-          <div class="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-full px-4 py-1.5">
-            <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: #e8590c;"></span>
-            <span class="text-xs text-gray-600">Ex-coordenadora pedagógica</span>
-          </div>
-          <div class="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-full px-4 py-1.5">
-            <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: #e8590c;"></span>
-            <span class="text-xs text-gray-600">Fundadora Fábrica Mágica</span>
-          </div>
-          <div class="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-full px-4 py-1.5">
-            <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: #e8590c;"></span>
-            <span class="text-xs text-gray-600">Especialista em Educação Infantil</span>
-          </div>
-        </div>
-
-      </div>
     </div>
+
   </div>
 </section>

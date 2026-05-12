@@ -46,7 +46,7 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
           </li>
           <li class="flex items-start gap-2.5 text-sm text-gray-400">
             <span class="mt-0.5 flex-shrink-0">○</span>
-            <span>Sala VIP — aquecimento exclusivo ao vivo</span>
+            <span>Sala VIP — encontro exclusivo no Zoom</span>
           </li>
           <li class="flex items-start gap-2.5 text-sm text-gray-400">
             <span class="mt-0.5 flex-shrink-0">○</span>
@@ -60,24 +60,27 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
 
         <a
           href={CHECKOUT_GRATUITO}
-          class="block w-full text-center font-semibold text-sm py-3.5 rounded-xl transition-all border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50"
+          class="block w-full text-center text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
+          style="background-color: #e8590c;"
+          onmouseover="this.style.backgroundColor='#c44a08'"
+          onmouseout="this.style.backgroundColor='#e8590c'"
         >
           Quero a vaga gratuita →
         </a>
       </div>
 
       {/* ── VIP ── */}
-      <div class="bg-white rounded-2xl p-6 flex flex-col shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-200 relative" style="border: 2px solid #2C3E99;">
+      <div class="bg-white rounded-2xl p-6 flex flex-col shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-200 relative border-2 border-gray-800">
         <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold uppercase tracking-wider px-4 py-1 rounded-full whitespace-nowrap" style="background-color: #e8590c;">
           ⭐ Mais escolhido
         </div>
-        <span class="inline-block self-start text-[10px] font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4 text-white" style="background-color: #2C3E99;">
+        <span class="inline-block self-start text-[10px] font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4 text-white" style="background-color: #e8590c;">
           VIP
         </span>
         <p class="text-xl font-bold text-gray-900 mb-1">Professora VIP</p>
-        <p class="text-3xl font-bold mb-1" style="color: #2C3E99;">R$ 19,70</p>
+        <p class="text-3xl font-bold text-gray-900 mb-1">R$ 19,70</p>
         <p class="text-xs text-gray-400 mb-5 leading-relaxed">
-          Material + Certificado Gov.br incluídos<br />Sala VIP + acesso à gravação
+          Sala VIP + certificado Gov.br incluídos<br />acesso à gravação
         </p>
 
         <hr class="border-gray-100 mb-5" />
@@ -94,11 +97,11 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
           </li>
           <li class="flex items-start gap-2.5 text-sm text-gray-700">
             <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
-            <strong>Sala VIP</strong> — aquecimento exclusivo ao vivo
+            <strong>Sala VIP</strong> — 1 dia antes da imersão, encontro exclusivo no Zoom
           </li>
           <li class="flex items-start gap-2.5 text-sm text-gray-700">
             <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
-            Certificado assinado no Gov.br ({SEMINARIO.cargaVip})
+            Certificado assinado no Gov.br ({SEMINARIO.cargaVip}) em PDF
           </li>
           <li class="flex items-start gap-2.5 text-sm text-gray-700">
             <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
@@ -123,13 +126,13 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
 
       {/* ── PLATINUM ── */}
       <div class="bg-white rounded-2xl p-6 border border-gray-200 flex flex-col shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
-        <span class="inline-block self-start text-[10px] font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4 text-white" style="background-color: #1a2570;">
+        <span class="inline-block self-start text-[10px] font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4 text-white" style="background-color: #374151;">
           Platinum
         </span>
         <p class="text-xl font-bold text-gray-900 mb-1">Professora Platinum</p>
         <p class="text-3xl font-bold text-gray-900 mb-1">R$ 39,70</p>
         <p class="text-xs text-gray-400 mb-5 leading-relaxed">
-          Edição completa · certificado físico pelos Correios<br />Número de edição limitada
+          Certificado físico pelos Correios<br />+ todos os benefícios VIP
         </p>
 
         <hr class="border-gray-100 mb-5" />
@@ -146,15 +149,11 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
           </li>
           <li class="flex items-start gap-2.5 text-sm text-gray-700">
             <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
-            <strong>Sala VIP</strong> — aquecimento exclusivo ao vivo
+            <strong>Sala VIP</strong> — 1 dia antes da imersão, encontro exclusivo no Zoom
           </li>
           <li class="flex items-start gap-2.5 text-sm text-gray-700">
             <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
-            Certificado assinado no Gov.br ({SEMINARIO.cargaPlatinum})
-          </li>
-          <li class="flex items-start gap-2.5 text-sm text-gray-700">
-            <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
-            Certificado físico impresso enviado pelos Correios
+            Certificado físico impresso enviado pelos Correios ({SEMINARIO.cargaPlatinum})
           </li>
           <li class="flex items-start gap-2.5 text-sm text-gray-700">
             <span class="mt-0.5 flex-shrink-0 font-bold" style="color: #e8590c;">✦</span>
@@ -168,8 +167,10 @@ import { SEMINARIO, CHECKOUT_GRATUITO, CHECKOUT_VIP, CHECKOUT_PLATINUM } from '.
 
         <a
           href={CHECKOUT_PLATINUM}
-          class="block w-full text-center text-white font-bold text-sm py-3.5 rounded-xl transition-all hover:opacity-90"
-          style="background-color: #1a2570;"
+          class="block w-full text-center text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
+          style="background-color: #e8590c;"
+          onmouseover="this.style.backgroundColor='#c44a08'"
+          onmouseout="this.style.backgroundColor='#e8590c'"
         >
           Quero o Platinum →
         </a>
