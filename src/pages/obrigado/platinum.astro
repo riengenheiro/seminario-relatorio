@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SRObrigado from '../../components/SRObrigado.astro';
+import { WHATSAPP_GRUPO_PLATINUM, SEMINARIO } from '../../config/seminario';
+
+const title = 'Vaga Platinum confirmada — ' + SEMINARIO.nome;
+const description = 'Sua vaga Platinum está confirmada. Entre agora no grupo aberto para receber os avisos e orientações do seu acesso.';
+---
+<Layout title={title} description={description} canonicalPath="/obrigado/platinum/">
+  <SRObrigado tier="Platinum" whatsappUrl={WHATSAPP_GRUPO_PLATINUM} variant="platinum" />
+</Layout>

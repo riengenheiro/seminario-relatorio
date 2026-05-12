@@ -27,8 +27,13 @@ export const CHECKOUT_GRATUITO = '#gratuito-checkout';
 export const CHECKOUT_VIP = '#vip-checkout';
 export const CHECKOUT_PLATINUM = '#platinum-checkout';
 
-/** Link do grupo de WhatsApp usado na página de obrigado */
-export const WHATSAPP_GRUPO = 'https://chat.whatsapp.com/EXEMPLO';
+/** Links dos grupos de WhatsApp usados nas páginas de obrigado */
+export const WHATSAPP_GRUPO_GOLD = 'https://chat.whatsapp.com/BRamHebNJTLDwNwmxh6ySg';
+export const WHATSAPP_GRUPO_VIP = 'https://chat.whatsapp.com/BRamHebNJTLDwNwmxh6ySg';
+export const WHATSAPP_GRUPO_PLATINUM = 'https://chat.whatsapp.com/BRamHebNJTLDwNwmxh6ySg';
+
+/** Mantido como compatibilidade para fluxos antigos */
+export const WHATSAPP_GRUPO = WHATSAPP_GRUPO_GOLD;
 
 /** ID do Facebook Pixel — mesmo da Doutora Escola por padrão */
 export const FACEBOOK_PIXEL_ID = '903214411087074';

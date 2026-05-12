@@ -47,7 +47,7 @@
 - ✅ Material da aula em PDF
 - Botão: QUERO SER VIP
 
-**PLATINUM — R$ 39,70** ⭐ Mais escolhido
+**PLATINUM — R$ 49,70** ⭐ Mais escolhido
 - ✅ Tudo do VIP
 - ✅ Certificado Gov — 30h
 - ✅ Certificado físico pelos Correios

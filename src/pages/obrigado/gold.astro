@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SRObrigado from '../../components/SRObrigado.astro';
+import { WHATSAPP_GRUPO_GOLD, SEMINARIO } from '../../config/seminario';
+
+const title = 'Vaga Gold confirmada — ' + SEMINARIO.nome;
+const description = 'Sua vaga Gold está confirmada. Entre agora no grupo oficial do WhatsApp para receber o link da aula.';
+---
+<Layout title={title} description={description} canonicalPath="/obrigado/gold/">
+  <SRObrigado tier="Gold" whatsappUrl={WHATSAPP_GRUPO_GOLD} />
+</Layout>
