@@ -11,43 +11,102 @@ interface Props {
 const { tier, whatsappUrl, variant = 'standard' } = Astro.props;
 
 const isPlatinum = variant === 'platinum';
-const tierClass = isPlatinum ? 'text-[#ff7300]' : tier === 'VIP' ? 'text-[#86efac]' : 'text-[#FFD54F]';
-const badgeClass = isPlatinum ? 'bg-[#ff7300] text-white' : 'bg-[#4CAF50] text-white';
-const heroClass = isPlatinum
-  ? 'bg-[radial-gradient(circle_at_top,#ff7300_0%,#111827_42%,#020617_100%)] text-white'
-  : 'bg-gradient-to-b from-[#e8590c] to-[#111827] text-white';
-const buttonShadow = isPlatinum
-  ? 'shadow-[0_8px_30px_rgba(255,115,0,0.42)] hover:shadow-[0_12px_40px_rgba(255,115,0,0.55)]'
-  : 'shadow-[0_8px_30px_rgba(37,211,102,0.5)] hover:shadow-[0_12px_40px_rgba(37,211,102,0.6)]';
-const buttonClass = isPlatinum ? 'bg-[#ff7300] hover:bg-[#e86800]' : 'bg-[#25D366] hover:bg-[#1ebe5b]';
+const isVIP = tier === 'VIP';
+const isGold = tier === 'Gold';
+
+// Cores consistentes com a landing page
+const tierColor = isPlatinum ? '#ff7300' : isVIP ? '#16a34a' : '#e8590c';
+const tierClass = isPlatinum ? 'text-[#ff7300]' : isVIP ? 'text-[#16a34a]' : 'text-[#FFD54F]';
+const badgeClass = isPlatinum 
+  ? 'bg-[#ff7300] text-white' 
+  : isVIP 
+    ? 'bg-[#16a34a] text-white' 
+    : 'bg-[#e8590c] text-white';
+const heroClass = 'bg-[#111827] text-white';
+const buttonClass = isPlatinum 
+  ? 'bg-[#ff7300] hover:bg-[#e86800]' 
+  : isVIP 
+    ? 'bg-[#16a34a] hover:bg-[#15803d]' 
+    : 'bg-[#fd7200] hover:bg-[#e56500]';
+const buttonShadow = 'shadow-[0_8px_30px_rgba(232,89,12,0.4)] hover:shadow-[0_12px_40px_rgba(232,89,12,0.55)]';
 const groupName = isPlatinum ? 'grupo aberto Platinum' : 'grupo oficial de WhatsApp';
 const redirectLabel = isPlatinum ? 'grupo aberto' : 'grupo';
+
+// Título e mensagem específicos por tier
+const tierTitle = isPlatinum 
+  ? 'Platinum' 
+  : isVIP 
+    ? 'VIP' 
+    : 'Gold';
+
+const tierMessage = isPlatinum 
+  ? 'Você está no plano mais completo. Entre agora no grupo aberto Platinum para receber o link da aula, avisos prioritários e orientações do seu acesso.'
+  : isVIP
+    ? 'Você escolheu a experiência completa VIP. Entre agora no grupo oficial para receber o link da aula e todos os avisos importantes.'
+    : 'Sua vaga gratuita está confirmada. Entre agora no grupo oficial para receber o link da aula e todos os avisos importantes.';
 ---
 <main class="min-h-screen w-full bg-white text-black font-sans antialiased flex flex-col">
 
-  <section class={`flex-1 px-6 py-14 md:py-20 ${heroClass}`}>
+  {/* Header com identidade visual consistente com a landing */}
+  <section class={`${heroClass} border-b border-white/10`}>
+    <div class="max-w-5xl mx-auto px-5 py-8 md:py-12">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        
+        {/* Coluna esquerda: Wordmark e confirmação */}
+        <div class="text-center md:text-left">
+          {/* Wordmark - mesmo estilo da landing */}
+          <div class="mb-6 inline-flex flex-col items-center md:items-start leading-[1.05] font-['DM_Serif_Display',Georgia,serif]">
+            <span class="text-xl sm:text-2xl md:text-3xl font-normal uppercase tracking-[0.18em] text-white/90">
+              Seminário de
+            </span>
+            <span class="text-[2.35rem] sm:text-[2.75rem] md:text-[3.5rem] font-normal uppercase tracking-[0.06em] text-white -mt-0.5">
+              Relatórios
+            </span>
+            <span class="mt-3 h-1 w-28 rounded-full" style={`background-color: ${tierColor};`}></span>
+          </div>
+
+          {/* Badge de confirmação */}
+          <span class={`inline-block mb-4 px-4 py-1.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider shadow-lg ${badgeClass}`}>
+            ✓ Inscrição {tierTitle} confirmada
+          </span>
+
+          <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight text-white">
+            Parabéns<span id="nome-aluna"></span>!<br />
+            Sua vaga <span class={tierClass}>{tier}</span> está confirmada.
+          </h1>
+
+          <p class="text-base text-white/80 leading-relaxed">
+            {tierMessage}
+          </p>
+        </div>
+
+        {/* Coluna direita: Foto da Guaciara (consistente com landing) */}
+        <div class="flex flex-col items-center gap-4">
+          <div class="w-64 h-72 md:w-72 md:h-[340px] rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl bg-white/5">
+            <img
+              src="/images/seminario/guaciara-foto.webp"
+              alt="Guaciara Fornaciari"
+              class="w-full h-full object-cover"
+              width="512"
+              height="512"
+            />
+          </div>
+          <div class="rounded-2xl px-5 py-4 text-center w-full max-w-[288px] text-white border border-white/15 bg-white/5">
+            <p class="font-bold text-base mb-1">Guaciara Fornaciari</p>
+            <p class="text-xs text-white/70">Fonoaudióloga · Professora · Fundadora Doutora Escola</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Seção de ação - CTA do WhatsApp */}
+  <section class={`flex-1 px-6 py-12 md:py-16 ${heroClass}`}>
     <div class="max-w-2xl mx-auto text-center">
-      <span class={`inline-block mb-6 px-4 py-1.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider shadow-lg ${badgeClass}`}>
-        ✓ Inscrição {tier} confirmada
-      </span>
-
-      <h1 class="text-3xl md:text-4xl font-extrabold mb-5 leading-tight">
-        Parabéns<span id="nome-aluna"></span>!<br />
-        Sua vaga <span class={tierClass}>{tier}</span> no Seminário de Relatórios está confirmada.
-      </h1>
-
-      <p class="text-lg text-white/90 mb-10">
-        {isPlatinum ? (
-          <>
-            Você está no plano mais completo. Entre agora no <strong>grupo aberto Platinum</strong>
-            para receber o link da aula, avisos prioritários e orientações do seu acesso.
-          </>
-        ) : (
-          <>
-            Para receber o <strong>link da aula</strong> e todos os avisos importantes,
-            entre agora no {groupName}:
-          </>
-        )}
+      
+      <p class="text-lg text-white/90 mb-8">
+        Para receber o <strong>link da aula</strong> e todos os avisos importantes,
+        entre agora no {groupName}:
       </p>
 
       <a
@@ -61,6 +120,7 @@ const redirectLabel = isPlatinum ? 'grupo aberto' : 'grupo';
         {isPlatinum ? 'ENTRAR NO GRUPO ABERTO PLATINUM' : 'ENTRAR NO GRUPO DO WHATSAPP'}
       </a>
 
+      {/* Timer */}
       <div
         id="sr-wa-timer"
         class="mt-6 max-w-md mx-auto"
@@ -69,8 +129,8 @@ const redirectLabel = isPlatinum ? 'grupo aberto' : 'grupo';
         <div class="h-1 w-full rounded-full bg-white/20 overflow-hidden mb-2">
           <div
             id="sr-wa-timer-bar"
-            class={`h-full rounded-full ${isPlatinum ? 'bg-[#ff7300]' : 'bg-[#25D366]'} transition-[width] duration-1000 linear`}
-            style="width: 100%;"
+            class="h-full rounded-full transition-[width] duration-1000 linear"
+            style={`width: 100%; background-color: ${tierColor};`}
           >
           </div>
         </div>
@@ -88,14 +148,51 @@ const redirectLabel = isPlatinum ? 'grupo aberto' : 'grupo';
     </div>
   </section>
 
-  <section class={`${isPlatinum ? 'bg-[#fff7ed]' : 'bg-white'} py-12 px-6 border-t border-gray-100`}>
-    <div class="max-w-2xl mx-auto text-center">
-      <p class="text-gray-700 mb-3 font-semibold">Próximos passos:</p>
-      <ul class="text-gray-600 text-sm md:text-base space-y-2 mb-2 inline-block text-left">
-        <li><span class="text-[#4CAF50] font-bold">1.</span> Entre no {isPlatinum ? 'grupo aberto Platinum' : 'grupo do WhatsApp'} pelo botão acima</li>
-        <li><span class="text-[#4CAF50] font-bold">2.</span> Confira sua caixa de e-mail (e o spam) — vou te mandar uma mensagem de confirmação</li>
-        <li><span class="text-[#4CAF50] font-bold">3.</span> Salve a data: <strong>{SEMINARIO.dataExibida} · {SEMINARIO.horaExibida}</strong></li>
-      </ul>
+  {/* Seção de próximos passos - estilo consistente */}
+  <section class="bg-gray-50 py-12 px-6 border-t border-gray-200">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-8">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.2em] mb-2" style={`color: ${tierColor};`}>
+          Próximos passos
+        </p>
+        <h2 class="text-xl md:text-2xl font-bold text-gray-900">O que fazer agora</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        {/* Passo 1 */}
+        <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm text-center">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3" style={`background-color: ${tierColor};`}>
+            1
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Entre no grupo</h3>
+          <p class="text-sm text-gray-600">
+            Clique no botão acima e faça parte do {isPlatinum ? 'grupo aberto Platinum' : 'grupo oficial do WhatsApp'}
+          </p>
+        </div>
+
+        {/* Passo 2 */}
+        <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm text-center">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3" style={`background-color: ${tierColor};`}>
+            2
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Confira seu e-mail</h3>
+          <p class="text-sm text-gray-600">
+            Enviamos uma confirmação. Verifique também na caixa de spam.
+          </p>
+        </div>
+
+        {/* Passo 3 */}
+        <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm text-center">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3" style={`background-color: ${tierColor};`}>
+            3
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Salve a data</h3>
+          <p class="text-sm text-gray-600">
+            <strong>{SEMINARIO.dataExibida} · {SEMINARIO.horaExibida}</strong><br/>
+            Não chegue atrasada!
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 

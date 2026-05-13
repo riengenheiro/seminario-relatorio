@@ -30,7 +30,7 @@ export const CHECKOUT_PLATINUM = '#platinum-checkout';
 /** Links dos grupos de WhatsApp usados nas páginas de obrigado */
 export const WHATSAPP_GRUPO_GOLD = 'https://chat.whatsapp.com/BRamHebNJTLDwNwmxh6ySg';
 export const WHATSAPP_GRUPO_VIP = 'https://chat.whatsapp.com/BRamHebNJTLDwNwmxh6ySg';
-export const WHATSAPP_GRUPO_PLATINUM = 'https://chat.whatsapp.com/BRamHebNJTLDwNwmxh6ySg';
+export const WHATSAPP_GRUPO_PLATINUM = 'https://chat.whatsapp.com/GN89SaFivKu7FzSShLpte4';
 
 /** Mantido como compatibilidade para fluxos antigos */
 export const WHATSAPP_GRUPO = WHATSAPP_GRUPO_GOLD;
