@@ -23,9 +23,9 @@ export const SEMINARIO = {
  * Links de checkout de todos os tiers.
  * Trocar pelos URLs definitivos (Hotmart, Kiwify, Voomp, etc.).
  */
-export const CHECKOUT_GRATUITO = '#gratuito-checkout';
-export const CHECKOUT_VIP = '#vip-checkout';
-export const CHECKOUT_PLATINUM = '#platinum-checkout';
+export const CHECKOUT_GRATUITO = 'https://fm.doutoraescola.com.br/checkout/?s=EfFJR';
+export const CHECKOUT_VIP = 'https://fm.doutoraescola.com.br/checkout/?s=RzIvZ';
+export const CHECKOUT_PLATINUM = 'https://fm.doutoraescola.com.br/checkout/?s=SoOG7';
 
 /** Links dos grupos de WhatsApp usados nas páginas de obrigado */
 export const WHATSAPP_GRUPO_GOLD = 'https://chat.whatsapp.com/BRamHebNJTLDwNwmxh6ySg';
