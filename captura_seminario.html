@@ -44,15 +44,15 @@ body {
 
 .tag-evento {
   display: inline-block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  letter-spacing: 0.3px;
   color: var(--dourado);
   border: 1px solid var(--dourado-claro);
-  padding: 5px 16px;
+  padding: 6px 16px;
   border-radius: 100px;
   margin-bottom: 24px;
+  line-height: 1.4;
 }
 
 .hero-texto h1 {
@@ -72,6 +72,14 @@ body {
   margin-bottom: 28px;
 }
 .hero-dor strong { color: var(--vinho); font-weight: 500; }
+
+.hero-info {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--vinho);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
 
 .hero-pilares { display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px; }
 .pilar-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--texto); }
@@ -362,22 +370,20 @@ hr.plano-sep { border: none; border-top: 1px solid var(--creme-escuro); margin-b
   <section class="hero">
 
     <div class="hero-texto">
-      <div class="tag-evento fade-up">Seminário · Doutora Escola · 2026</div>
+      <div class="tag-evento fade-up">Seminário Online e Gratuito • Com Certificado de 10h</div>
 
       <h1 class="fade-up d1">
-        O seu relatório<br>pode <em>mudar uma vida.</em><br>A começar pela sua.
+        O passo a passo definitivo para escrever relatórios precisos, sem travar na frente da página em branco.
       </h1>
 
       <p class="hero-dor fade-up d2">
-        Você passa horas escrevendo relatórios que <strong>ninguém valoriza como deveria.</strong>
-        A diretora não comenta. Os pais mal olham. E você continua fazendo tudo isso no fim de semana,
-        sem reconhecimento nenhum.
-        <br><br>
-        No Seminário de Relatórios Doutora Escola, você vai descobrir como esse documento pode te dar
-        o que você sempre mereceu: <strong>visibilidade, autoridade e o reconhecimento da sua carreira.</strong>
+        Descubra a técnica exata para saber o que colocar no papel e como escrever — ganhando tempo e segurança na hora das entregas.
       </p>
 
-      <div class="hero-pilares fade-up d3">
+      <p class="hero-info fade-up d3">
+        Seminário ao vivo com a Dra. Guaciara Fornaciari | 26 de maio às 19h37
+      </p>
+      <div class="hero-pilares fade-up d3" style="display:none">
         <div class="pilar-item">
           <div class="pilar-icon">❤️</div>
           <span>Como um relatório pode salvar a vida de uma criança — a história real</span>
@@ -393,17 +399,13 @@ hr.plano-sep { border: none; border-top: 1px solid var(--creme-escuro); margin-b
       </div>
 
       <div class="fade-up d4">
-        <a href="#planos" class="btn-hero">Ver os planos →</a>
-        <div class="vagas-nota">
-          <div class="dot-vivo"></div>
-          Inscrição pelo checkout · Vagas limitadas
-        </div>
+        <a href="#planos" class="btn-hero">Garantir minha vaga gratuita agora →</a>
       </div>
     </div>
 
     <div class="hero-foto fade-up d2">
       <div class="foto-frame">
-        <img src="foto-especialista.jpg" alt="Especialista Doutora Escola"
+        <img src="foto-especialista.jpg" alt="Dra. Guaciara Fornaciari"
           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="foto-placeholder" style="display:none">
           <span>👩‍🏫</span>
@@ -411,7 +413,7 @@ hr.plano-sep { border: none; border-top: 1px solid var(--creme-escuro); margin-b
         </div>
       </div>
       <div class="foto-badge">
-        <p class="foto-badge-nome">Nome da Especialista</p>
+        <p class="foto-badge-nome">Dra. Guaciara Fornaciari</p>
         <p class="foto-badge-titulo">Especialista em Educação Infantil · Doutora Escola</p>
       </div>
     </div>

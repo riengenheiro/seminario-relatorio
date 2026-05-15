@@ -1,5 +1,4 @@
 ---
-import { SEMINARIO } from '../config/seminario';
 ---
 <section class="bg-[#111827] border-b border-white/10 py-8 md:py-16 px-5 text-white">
   <div class="max-w-5xl mx-auto">
@@ -9,30 +8,22 @@ import { SEMINARIO } from '../config/seminario';
       {/* ── COLUNA ESQUERDA: texto — wordmark, H1 e CTA centralizados ── */}
       <div class="flex flex-col items-center text-center w-full max-w-2xl mx-auto">
 
-        {/* Wordmark (logo textual) — DM Serif Display: contraste com Poppins do restante */}
-        <div class="mb-6 inline-flex flex-col items-center leading-[1.05] font-['DM_Serif_Display',Georgia,serif]">
-          <span class="text-xl sm:text-2xl md:text-3xl font-normal uppercase tracking-[0.18em] text-white/90">
-            Seminário de
-          </span>
-          <span class="text-[2.35rem] sm:text-[2.75rem] md:text-[3.75rem] font-normal uppercase tracking-[0.06em] text-white -mt-0.5">
-            Relatórios
-          </span>
-          <span class="mt-3 h-1 w-28 rounded-full" style="background-color: #e8590c;"></span>
-        </div>
+        {/* Selo superior */}
+        <p class="mb-6 inline-flex items-center rounded-full border border-white/30 px-4 py-2 text-xs sm:text-sm font-semibold text-white/90">
+          Seminário Online e Gratuito • Com Certificado de 10h
+        </p>
 
         {/* H1 */}
         <h1 class="text-2xl md:text-[2.1rem] font-bold text-white mb-4 leading-snug tracking-tight">
-          Participe do Seminário de Relatórios e{' '}
-          <span class="uppercase tracking-tight" style="color: #e8590c;">descubra exatamente o que colocar no papel — com a técnica certa</span>
-          {' '}— nesse momento que vivemos.
+          O passo a passo definitivo para escrever relatórios precisos, sem travar na frente da página em branco.
         </h1>
 
-        {/* Sub + data + reforço */}
-        <p class="text-sm md:text-base text-white/75 mb-2 font-medium">
-          Aula online e gratuita + Certificado de {SEMINARIO.cargaGratuita}
+        {/* Sub-headline + info */}
+        <p class="text-sm md:text-base text-white/80 mb-3 font-medium">
+          Descubra a técnica exata para saber o que colocar no papel e como escrever — ganhando tempo e segurança na hora das entregas.
         </p>
-        <p class="text-2xl md:text-[2.1rem] font-bold text-white mb-6 leading-snug tracking-tight">
-          {SEMINARIO.dataExibida} às {SEMINARIO.horaExibida}
+        <p class="text-sm md:text-base text-white/90 mb-6 font-semibold">
+          Seminario ao vivo com a Dra. Guaciara Fornaciari | 26 de maio às 19h37
         </p>
 
         {/* CTA principal — leva aos planos (#tiers) */}
@@ -44,7 +35,7 @@ import { SEMINARIO } from '../config/seminario';
             onmouseover="this.style.backgroundColor='rgb(235, 130, 18)'"
             onmouseout="this.style.backgroundColor='rgb(253, 149, 26)'"
           >
-            Garantir minha vaga gratuita →
+            Garantir minha vaga gratuita agora →
           </a>
           <p class="mt-2 text-xs text-white/55 flex items-center justify-center gap-2 w-full">
             <span class="inline-block w-2 h-2 rounded-full bg-red-500 flex-shrink-0" style="animation: pulse 1.5s infinite;"></span>
@@ -63,7 +54,7 @@ import { SEMINARIO } from '../config/seminario';
               />
             </div>
             <p class="text-sm text-white/80 font-medium leading-tight">
-              com <strong class="text-white">Guaciara Fornaciari</strong>
+              com <strong class="text-white">Dra. Guaciara Fornaciari</strong>
             </p>
           </div>
         </div>
@@ -84,7 +75,7 @@ import { SEMINARIO } from '../config/seminario';
         </div>
 
         <div class="rounded-2xl px-5 py-4 text-center w-full max-w-[288px] text-white border border-white/15 bg-white/5">
-          <p class="font-bold text-base mb-1">Guaciara Fornaciari</p>
+          <p class="font-bold text-base mb-1">Dra. Guaciara Fornaciari</p>
           <p class="text-xs text-white/70">Fonoaudióloga · Professora · Fundadora Doutora Escola</p>
         </div>
 
