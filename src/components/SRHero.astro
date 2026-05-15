@@ -8,22 +8,40 @@
       {/* ── COLUNA ESQUERDA: texto — wordmark, H1 e CTA centralizados ── */}
       <div class="flex flex-col items-center text-center w-full max-w-2xl mx-auto">
 
-        {/* Selo superior */}
-        <p class="mb-6 inline-flex items-center rounded-full border border-white/30 px-4 py-2 text-xs sm:text-sm font-semibold text-white/90">
-          Seminário Online e Gratuito • Com Certificado de 10h
+        {/* Selo superior (super-headline) */}
+        <p class="mb-5 inline-flex items-center rounded-full border border-white/30 px-4 py-1.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.15em] text-white/90">
+          Seminário Online e Gratuito • Certificado de 10h
         </p>
 
-        {/* H1 */}
+        {/* Wordmark (logo textual) — DM Serif Display: contraste com Poppins do restante */}
+        <div class="mb-6 inline-flex flex-col items-center leading-[1.05] font-['DM_Serif_Display',Georgia,serif]">
+          <span class="text-xl sm:text-2xl md:text-3xl font-normal uppercase tracking-[0.18em] text-white/90">
+            Seminário de
+          </span>
+          <span class="text-[2.35rem] sm:text-[2.75rem] md:text-[3.75rem] font-normal uppercase tracking-[0.06em] text-white -mt-0.5">
+            Relatórios
+          </span>
+          <span class="mt-3 h-1 w-28 rounded-full" style="background-color: #e8590c;"></span>
+        </div>
+
+        {/* H1 — Headline principal com destaques em laranja */}
         <h1 class="text-2xl md:text-[2.1rem] font-bold text-white mb-4 leading-snug tracking-tight">
-          O passo a passo definitivo para escrever relatórios precisos, sem travar na frente da página em branco.
+          O{' '}
+          <span class="uppercase tracking-tight" style="color: #e8590c;">passo a passo definitivo</span>
+          {' '}para escrever relatórios precisos,{' '}
+          <span class="uppercase tracking-tight" style="color: #e8590c;">sem travar na frente da página em branco</span>.
         </h1>
 
-        {/* Sub-headline + info */}
-        <p class="text-sm md:text-base text-white/80 mb-3 font-medium">
-          Descubra a técnica exata para saber o que colocar no papel e como escrever — ganhando tempo e segurança na hora das entregas.
+        {/* Sub-headline */}
+        <p class="text-sm md:text-base text-white/80 mb-4 font-medium">
+          Descubra a técnica exata para saber <strong class="text-white">o que colocar no papel</strong> e <strong class="text-white">como escrever</strong> — ganhando tempo e segurança na hora das entregas.
         </p>
-        <p class="text-sm md:text-base text-white/90 mb-6 font-semibold">
-          Seminario ao vivo com a Dra. Guaciara Fornaciari | 26 de maio às 19h37
+
+        {/* Info / Data — destaque grande */}
+        <p class="text-base md:text-lg font-bold text-white mb-6 leading-snug">
+          Seminário ao vivo com a{' '}
+          <span style="color: #e8590c;">Dra. Guaciara Fornaciari</span>
+          {' '}· 26 de maio às 19h37
         </p>
 
         {/* CTA principal — leva aos planos (#tiers) */}
