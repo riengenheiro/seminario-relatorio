@@ -36,4 +36,4 @@ export const WHATSAPP_GRUPO_PLATINUM = 'https://chat.whatsapp.com/GN89SaFivKu7Fz
 export const WHATSAPP_GRUPO = WHATSAPP_GRUPO_GOLD;
 
 /** ID do Facebook Pixel (Meta) */
-export const FACEBOOK_PIXEL_ID = '2522319621331192';
+export const FACEBOOK_PIXEL_ID = '903214411087074';
